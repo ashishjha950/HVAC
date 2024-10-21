@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="blog.css" />
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <nav>
+      <div class="nav1">
+        <div class="info1">
+          <span>
+            <i class="fa-regular fa-clock medai2"></i>
+            Week day: 08:00 am to 18:00 pm
+          </span>
+          <span>
+            <i class="fa-regular fa-envelope medai2"></i>
+            Info.colorlib@gmail.com
+          </span>
+        </div>
+        <div class="info2">
+          <span>
+            <i class="fa-solid fa-phone medai2"></i>
+            (+12) 345 678 910
+          </span>
+          <span>
+            <i class="fa-brands fa-facebook-f media"></i>
+            <i class="fa-brands fa-twitter media"></i>
+            <i class="fa-brands fa-google media"></i>
+            <i class="fa-brands fa-instagram media"></i>
+          </span>
+        </div>
+      </div>
+      <div class="nav2">
+        <span class="logo">
+          <img
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAFFElEQVR4nO1azYscRRRvSTYq0SRrdMWT/g35AEHJHhQdM7s7/fs1LSZOsp4GFEJC8KgYzEnXS1AEIcEoi8GLBxONnmSDAQkexf3Ix2HXJBuUXIybqWqx5fX2yqzTr7t6dmb8IA8KBqqr3vu9r3r1ajzvDv1PKa5WB5ukb8gJA3xhgRlD3jSASQZ50wLTMiffNH2/FtdqW7x/A8WVyt0GeNEAXxvgd0vGZYasMeRZQ+6Vvby+AwjDey152JJXywqvDuAnCxyKx8fv6QuIyPefs+SlrgFoB3QxIp/trRuRx3oGoB3Qx2L57oIYHX3Ykt/3DQTTGCIvxMBQV0DcrtUeE3M7Mr5mgeOG3GeAbbHvb40bjYFkjIw8aH1/uwH2W+CEAa47WmZOZFi7JRxAGOCbCKjGYbjOee/h4fWR748YYMoFTNypZSR7FLpTlwIzIncXJRAjbtZJijbA+wWa+iiu1zd6XaI4DO+z5GSB5d/tJMXmWeJ1r0dkgCN5vKMgeMZpIzGfJWdzNnutVyCcwAAXnQ7N9MRW3cnrE9l8NzvoYo2rqia6GBNOMQNcVoAs5Aa+FICqb/aybFAoAqpq4AfBHnWhVLHaOeHKPA7DByzwiiFPi0YNcEuGBa4Y8owFDpQ5EwxwTknHX2YLUK0OaqW4aMYBwOb0LvKrwwF6W9J7DDxStG+THFWARHGlsilrga8suCancA6AdZZsGPJGEYAMQLcs+UZe7MXDw+sNuZi1XkC2LTDAO0qQH1cZBEHdAj+UBZClLAu8Go+N3Z/FywIfKop4ux2I+G82k32J4NXqoAUeN0EwLmnYkL8UCDjfJAMRTkZicWCmANBvlvxMLGx9/0mJt0S2ZZ5Z35/OQj2noN6WWux8CS3PrwixyoqiDHK+hOudT2QLgh2Kt8xkWSRTw1KKp/POMSCWUFxeFBKWcLnFRAFh+JAy/3MWA5MJJAw35M1nrlF8PRGqUtlUAkiz5aBW58sCWeoKkDDcXMK1lsoDKXCtpMvh7lq+6lpB8LzrPpZcKO1aasXr+9tTixTf5FqCUAK7zRq+v1WEK2GRqVSJOxU+0+7pF9ifzk+U0KSMeQlsiQkZqSWcQdhljU+kvF9SgHyeBSRbUOCE5iaJluv1jZZ8wgKflAQqgp6NguApqXTzeFjgpKLkt9o+ll6s8vH1vBJlFrighty5RJuc9Rlz7jRGNBSvzQv2hfUalvUojFrgQYG+NTFEq77NYExRRE2s2gUMsBXeUHnBITcVQRE3Ml1PwN8qyjjjL6I3KsyJ3e7MJYzZC3njEsJnyr3BU+j5ODRz4tLRUG5QkVAnBUCXMmp5TbkCwEcyhFish9AYs+7y5Kn1D2AA8WaWLaKWm5Lq6bXQAxwNAfEnHPHURoNBanzSK+AGPLNnGz3R0Q+7QSiZcP3CgSa1GKmEyBpkjiVq0DyWCkQLQ87F3KFAi5nNSbk2pzWZgtSwaaVs/yeWik72rKTHthx6gXfFQa4CgYY0m6Of2NyToRxrQCSvRuNAakmtHPCrh6zUgF7XXjoKQSTmn5RGgXJHTsIdsjjjmgxGfLQA+xMCkDgZIkb5+wS+eiaQPylPWCo0M16MMyyO63NEtpjqGSOvgABPujp27u8T7i6WocAZkqn2E4pvUMfLHtRKhjzSV/4H/kHhLhbEOxJ/18SlY4BMpIqVgrAjlNrt0nuBpKCpY2ZduKnpaHR8qcaaW78KNdTudnJHce1Cr5D3n+Q/gT6tkvPlYTKQwAAAABJRU5ErkJggg=="
+          />
+          HVAC
+        </span>
+        <div class="nav-content">
+          <div class="nav-content1">
+            <a href="index.html"><span class="pg-home">HOME</span></a>
+            <a href="cars.html"><span class="pg-cars">CARS</span></a>
+            <a href="blog.html"><span class="pg-blog">BLOG</span></a>
+            <a
+              ><span class="pg-pages">PAGES</span>
+              <div class="dropDown">
+                <ul>
+                  <li onclick="aboutOpen()">About Us</li>
+                  <li onclick="carOpen()">Car Details</li>
+                  <li onclick="blogOpen()">Blog Details</li>
+                </ul>
+              </div>
+            </a>
+            <a href="about.html"><span class="pg-about">ABOUT</span></a>
+            <a href="contact.html"><span class="pg-contact">CONTACT</span></a>
+          </div>
+          <div class="nav-content2">
+            <span
+              ><a href="#"> <i class="fa-solid fa-cart-plus"></i></a> </span
+            ><span
+              ><a href="#">
+                <i class="fa-solid fa-magnifying-glass"></i
+              ></a> </span
+            ><span class="btn1"><a href="#"> Add Car</a> </span>
+          </div>
+        </div>
+        <i onclick="showSidebar()" class="fa-solid fa-bars menu"></i>
+      </div>
+    </nav>
+
+    <div class="sidebarfull">
+      <div class="sidebar">
+        <div class="nav-content2">
+          <span onclick="hideSidebar()"> <i class="fa-solid fa-plus"></i> </span
+          ><span> <i class="fa-solid fa-magnifying-glass"></i> </span
+          ><span class="btn1"> Add Car </span>
+        </div>
+        <span class="logo">
+          <img
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAFFElEQVR4nO1azYscRRRvSTYq0SRrdMWT/g35AEHJHhQdM7s7/fs1LSZOsp4GFEJC8KgYzEnXS1AEIcEoi8GLBxONnmSDAQkexf3Ix2HXJBuUXIybqWqx5fX2yqzTr7t6dmb8IA8KBqqr3vu9r3r1ajzvDv1PKa5WB5ukb8gJA3xhgRlD3jSASQZ50wLTMiffNH2/FtdqW7x/A8WVyt0GeNEAXxvgd0vGZYasMeRZQ+6Vvby+AwjDey152JJXywqvDuAnCxyKx8fv6QuIyPefs+SlrgFoB3QxIp/trRuRx3oGoB3Qx2L57oIYHX3Ykt/3DQTTGCIvxMBQV0DcrtUeE3M7Mr5mgeOG3GeAbbHvb40bjYFkjIw8aH1/uwH2W+CEAa47WmZOZFi7JRxAGOCbCKjGYbjOee/h4fWR748YYMoFTNypZSR7FLpTlwIzIncXJRAjbtZJijbA+wWa+iiu1zd6XaI4DO+z5GSB5d/tJMXmWeJ1r0dkgCN5vKMgeMZpIzGfJWdzNnutVyCcwAAXnQ7N9MRW3cnrE9l8NzvoYo2rqia6GBNOMQNcVoAs5Aa+FICqb/aybFAoAqpq4AfBHnWhVLHaOeHKPA7DByzwiiFPi0YNcEuGBa4Y8owFDpQ5EwxwTknHX2YLUK0OaqW4aMYBwOb0LvKrwwF6W9J7DDxStG+THFWARHGlsilrga8suCancA6AdZZsGPJGEYAMQLcs+UZe7MXDw+sNuZi1XkC2LTDAO0qQH1cZBEHdAj+UBZClLAu8Go+N3Z/FywIfKop4ux2I+G82k32J4NXqoAUeN0EwLmnYkL8UCDjfJAMRTkZicWCmANBvlvxMLGx9/0mJt0S2ZZ5Z35/OQj2noN6WWux8CS3PrwixyoqiDHK+hOudT2QLgh2Kt8xkWSRTw1KKp/POMSCWUFxeFBKWcLnFRAFh+JAy/3MWA5MJJAw35M1nrlF8PRGqUtlUAkiz5aBW58sCWeoKkDDcXMK1lsoDKXCtpMvh7lq+6lpB8LzrPpZcKO1aasXr+9tTixTf5FqCUAK7zRq+v1WEK2GRqVSJOxU+0+7pF9ifzk+U0KSMeQlsiQkZqSWcQdhljU+kvF9SgHyeBSRbUOCE5iaJluv1jZZ8wgKflAQqgp6NguApqXTzeFjgpKLkt9o+ll6s8vH1vBJlFrighty5RJuc9Rlz7jRGNBSvzQv2hfUalvUojFrgQYG+NTFEq77NYExRRE2s2gUMsBXeUHnBITcVQRE3Ml1PwN8qyjjjL6I3KsyJ3e7MJYzZC3njEsJnyr3BU+j5ODRz4tLRUG5QkVAnBUCXMmp5TbkCwEcyhFish9AYs+7y5Kn1D2AA8WaWLaKWm5Lq6bXQAxwNAfEnHPHURoNBanzSK+AGPLNnGz3R0Q+7QSiZcP3CgSa1GKmEyBpkjiVq0DyWCkQLQ87F3KFAi5nNSbk2pzWZgtSwaaVs/yeWik72rKTHthx6gXfFQa4CgYY0m6Of2NyToRxrQCSvRuNAakmtHPCrh6zUgF7XXjoKQSTmn5RGgXJHTsIdsjjjmgxGfLQA+xMCkDgZIkb5+wS+eiaQPylPWCo0M16MMyyO63NEtpjqGSOvgABPujp27u8T7i6WocAZkqn2E4pvUMfLHtRKhjzSV/4H/kHhLhbEOxJ/18SlY4BMpIqVgrAjlNrt0nuBpKCpY2ZduKnpaHR8qcaaW78KNdTudnJHce1Cr5D3n+Q/gT6tkvPlYTKQwAAAABJRU5ErkJggg=="
+          />
+          HVAC
+        </span>
+        <div class="nav-content1">
+          <a href="index.html"><span>HOME</span></a>
+          <a href="cars.html"><span>CARS</span></a>
+          <a href="blog.html"><span>BLOG</span></a>
+          <a
+            ><span class="mob-btn-dropdown">PAGES</span>
+            <div class="mob-dropdown">
+              <ul>
+                <a href="about.html">
+                  <li>About Us</li>
+                </a>
+                <a href="cars.html">
+                  <li>Car Details</li>
+                </a>
+                <a href="blog.html">
+                  <li>Blog Details</li>
+                </a>
+              </ul>
+            </div>
+          </a>
+          <a href="about.html"><span>ABOUT</span></a>
+          <a href="contact.html"><span>CONTACT</span></a>
+        </div>
+        <div class="nav3">
+          <div class="info1">
+            <span>
+              <i class="fa-regular fa-clock medai2"></i>
+              Week day: 08:00 am to 18:00 pm
+            </span>
+            <span>
+              <i class="fa-regular fa-envelope medai2"></i>
+              Info.colorlib@gmail.com
+            </span>
+          </div>
+          <div class="info2">
+            <span>
+              <i class="fa-solid fa-phone medai2"></i>
+              (+12) 345 678 910
+            </span>
+            <span>
+              <i class="fa-brands fa-facebook-f media"></i>
+              <i class="fa-brands fa-twitter media"></i>
+              <i class="fa-brands fa-google media"></i>
+              <i class="fa-brands fa-instagram media"></i>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero">
+      <div data-aos="fade-right" class="hero-content">
+        <p>Latest Blogs</p>
+        <div class="pages">
+          <a href="index.html" style="color: white">
+            <span>
+              <i class="fa-solid fa-house-chimney" style="color: red"></i>
+              Home ></span
+            ></a
+          >
+          <span class="pg">Our Blogs</span>
+        </div>
+      </div>
+    </div>
+
+    <section>
+      <div class="blog">
+        <div class="cars">
+          <div data-aos="fade-down-up" class="blog-car">
+            <div class="car-img1">
+              <ul>
+                <li>By Polly Williams</li>
+                <li>Dec 11, 2018</li>
+                <li>8 Comment</li>
+              </ul>
+            </div>
+            <div class="car-content">
+              <a href="#"><h5>Benjamin Franklin S Method Of</h5></a>
+              <p>
+                Great business ideas when utilized effectively can save lots of
+                money. This is not only easy for those who work full-time as an
+                advertiser...
+              </p>
+            </div>
+          </div>
+          <div data-aos="fade-right" class="blog-car">
+            <div class="car-img2">
+              <ul>
+                <li>By Evelyn Lane</li>
+                <li>Dec 17, 2018</li>
+                <li>11 Comment</li>
+              </ul>
+            </div>
+            <div class="car-content">
+              <a href="#"><h5>Where To Look For Cheap Brochure</h5></a>
+              <p>
+                Usually potential customers will visit home for business
+                dealing. Print good amount of fliers and give it to anyone who
+                is visiting home like family...
+              </p>
+            </div>
+          </div>
+          <div data-aos="fade-down-right" class="blog-car">
+            <div class="car-img3">
+              <ul>
+                <li>By Jessie Palmer</li>
+                <li>Dec 19, 2018</li>
+                <li>18 Comment</li>
+              </ul>
+            </div>
+            <div class="car-content">
+              <a href="#"><h5>Promotional Advertising Specialty</h5></a>
+              <p>
+                For those who work outside home, employ college students to
+                distribute fliers at srightermarkets, community centers...
+              </p>
+            </div>
+          </div>
+          <div data-aos="fade-right" class="blog-car">
+            <div class="car-img4">
+              <ul>
+                <li>By Don Townsend</li>
+                <li>Dec 22, 2018</li>
+                <li>10 Comment</li>
+              </ul>
+            </div>
+            <div class="car-content">
+              <a href="#"><h5>Using Banner Stands To Increase</h5></a>
+              <p>
+                Spread the word by the mouth. Talk to everyone about the product
+                and ask them to talk about it to others...
+              </p>
+            </div>
+          </div>
+          <div data-aos="fade-down" class="blog-car">
+            <div class="car-img5">
+              <ul>
+                <li>By Isabella Mann</li>
+                <li>Dec 25, 2018</li>
+                <li>6 Comment</li>
+              </ul>
+            </div>
+            <div class="car-content">
+              <a href="#"><h5>3 Smart Reasons Why You Should</h5></a>
+              <p>
+                It's a very powerful tool to increase the network and doesn’t
+                even cost anything. When receiving a casual call from family
+                members and friends...
+              </p>
+            </div>
+          </div>
+          <div data-aos="fade-right-right" class="blog-car">
+            <div class="car-img6">
+              <ul>
+                <li>By Polly Williams</li>
+                <li>Dec 27, 2018</li>
+                <li>15 Comment</li>
+              </ul>
+            </div>
+            <div class="car-content">
+              <a href="#"><h5>Search Engine Optimization And</h5></a>
+              <p>
+                Some businesses place a jar at the reception counter where the
+                business cards can be dropped for future reference, while
+                visiting them...
+              </p>
+            </div>
+          </div>
+          <div class="pagination">
+            <a id="active" href="#">1 </a><a href="#">2 </a><a href="#">3 </a
+            ><a href="#"> >> </a>
+          </div>
+        </div>
+
+        <div class="news">
+          <span data-aos="fade-right" class="search">
+            <input type="text" placeholder="Search..." />
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </span>
+          <div class="feature">
+            <h4 data-aos="fade-right">Feature News</h4>
+            <div data-aos="fade-right" class="feature-con">
+              <a href="#"><h6>Where To Look For Cheap Brochure</h6></a>
+              <ul>
+                <li>By Polly Williams</li>
+                <li>Dec 27, 2018</li>
+              </ul>
+            </div>
+            <div data-aos="fade-right" class="feature-con">
+              <a href="#"><h6>Using Banner Stands To Increase</h6></a>
+              <ul>
+                <li>By Evelyn Lane</li>
+                <li>Dec 17, 2018</li>
+              </ul>
+            </div>
+            <div data-aos="fade-right" class="feature-con">
+              <a href="#"><h6>Promotional Advertising Specialty</h6></a>
+              <ul>
+                <li>By Don Townsend</li>
+                <li>Dec 22, 2018</li>
+              </ul>
+            </div>
+          </div>
+          <div class="categories">
+            <h4 data-aos="fade-right">Categories</h4>
+            <ul data-aos="fade-up">
+              <li>Creativity</li>
+              <li>Design</li>
+              <li>Inspiration</li>
+              <li>News</li>
+            </ul>
+          </div>
+          <div class="tags">
+            <h4 data-aos="fade-right">Tag</h4>
+            <ul data-aos="zoom-in-right">
+              <a href=""><li>CAR DEALER</li></a>
+              <a href=""><li>BMW</li></a>
+              <a href=""><li>CHEVROLET</li></a>
+              <a href=""><li>FERRARI</li></a>
+              <a href=""><li>HONDA</li></a>
+              <a href=""><li>HATCHBACK</li></a>
+            </ul>
+          </div>
+          <div class="newsletter">
+            <h4 data-aos="fade-right">Newsletter</h4>
+            <p data-aos="zoom-in-right">Subscribe our newsletter gor get</p>
+            <span data-aos="fade-right" class="email-input">
+              <input type="text" placeholder="Your Email" />
+              <button>Subscribe</button>
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer data-aos="zoom-in">
+      <div class="footer">
+        <div class="contact">
+          <h2>Contact Us Now!</h2>
+          <div>
+            <span>
+              <a href="#" class="call">
+                <i class="fa-solid fa-phone"></i>
+                (+12) 345 678 910
+              </a>
+            </span>
+            <span>
+              <a href="#" class="mail">
+                <i class="fa-regular fa-envelope medai2"></i>
+                Colorlib@gmail.com
+              </a>
+            </span>
+          </div>
+        </div>
+        <div class="footer-content">
+          <div class="footer-content1">
+            <h2>
+              <span> HVAC </span>
+            </h2>
+            <p>
+              Any questions? Let us know in store at 625 Gloria Union,
+              California, United Stated or call us on (+1) 96 123 8888
+            </p>
+            <p>
+              <span>
+                <i
+                  style="background-color: #324975"
+                  class="fa-brands fa-facebook-f media3"
+                ></i>
+                <i
+                  style="background: #2c85ae"
+                  class="fa-brands fa-twitter media3"
+                ></i>
+                <i
+                  style="background: #dc4438"
+                  class="fa-brands fa-google media3"
+                ></i>
+                <i
+                  style="background: #3eaff0"
+                  class="fa-brands fa-skype media3"
+                ></i>
+              </span>
+            </p>
+            <p>
+              <span>Copyright &copy; 2024 Colorlib</span>
+            </p>
+          </div>
+          <div class="footer-content2">
+            <h5>Infomation</h5>
+            <ul>
+              <li><a href="#">> Purchase</a></li>
+              <li><a href="#">> Payment</a></li>
+              <li><a href="#">> Shipping</a></li>
+              <li><a href="#">> Return</a></li>
+            </ul>
+          </div>
+          <div class="footer-content2">
+            <h5>Infomation</h5>
+            <ul>
+              <li><a href="#">> Hatchback</a></li>
+              <li><a href="#">> Sedan</a></li>
+              <li><a href="#">> SUV</a></li>
+              <li><a href="#">> Crossover</a></li>
+            </ul>
+          </div>
+          <div class="footer-content2">
+            <h5>Top Brand</h5>
+            <ul>
+              <li><a href="#">> Abarth</a></li>
+              <li><a href="#">> Acura</a></li>
+              <li><a href="#">> Alfa Romeo</a></li>
+              <li><a href="#">> Audi</a></li>
+            </ul>
+          </div>
+          <div class="footer-content2">
+            <h5></h5>
+            <ul>
+              <li><a href="#">> BMW</a></li>
+              <li><a href="#">> Chevrolet</a></li>
+              <li><a href="#">> Ferrari</a></li>
+              <li><a href="#">> Honda</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        offset: 300,
+        duration: 1000,
+      });
+    </script>
+  </body>
+</html>

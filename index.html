@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="home.css" />
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <nav>
+      <div class="nav1">
+        <div class="info1">
+          <span>
+            <i class="fa-regular fa-clock medai2"></i>
+            Week day: 08:00 am to 18:00 pm
+          </span>
+          <span>
+            <i class="fa-regular fa-envelope medai2"></i>
+            Info.colorlib@gmail.com
+          </span>
+        </div>
+        <div class="info2">
+          <span>
+            <i class="fa-solid fa-phone medai2"></i>
+            (+12) 345 678 910
+          </span>
+          <span>
+            <i class="fa-brands fa-facebook-f media"></i>
+            <i class="fa-brands fa-twitter media"></i>
+            <i class="fa-brands fa-google media"></i>
+            <i class="fa-brands fa-instagram media"></i>
+          </span>
+        </div>
+      </div>
+      <div class="nav2">
+        <span class="logo">
+          <img
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAFFElEQVR4nO1azYscRRRvSTYq0SRrdMWT/g35AEHJHhQdM7s7/fs1LSZOsp4GFEJC8KgYzEnXS1AEIcEoi8GLBxONnmSDAQkexf3Ix2HXJBuUXIybqWqx5fX2yqzTr7t6dmb8IA8KBqqr3vu9r3r1ajzvDv1PKa5WB5ukb8gJA3xhgRlD3jSASQZ50wLTMiffNH2/FtdqW7x/A8WVyt0GeNEAXxvgd0vGZYasMeRZQ+6Vvby+AwjDey152JJXywqvDuAnCxyKx8fv6QuIyPefs+SlrgFoB3QxIp/trRuRx3oGoB3Qx2L57oIYHX3Ykt/3DQTTGCIvxMBQV0DcrtUeE3M7Mr5mgeOG3GeAbbHvb40bjYFkjIw8aH1/uwH2W+CEAa47WmZOZFi7JRxAGOCbCKjGYbjOee/h4fWR748YYMoFTNypZSR7FLpTlwIzIncXJRAjbtZJijbA+wWa+iiu1zd6XaI4DO+z5GSB5d/tJMXmWeJ1r0dkgCN5vKMgeMZpIzGfJWdzNnutVyCcwAAXnQ7N9MRW3cnrE9l8NzvoYo2rqia6GBNOMQNcVoAs5Aa+FICqb/aybFAoAqpq4AfBHnWhVLHaOeHKPA7DByzwiiFPi0YNcEuGBa4Y8owFDpQ5EwxwTknHX2YLUK0OaqW4aMYBwOb0LvKrwwF6W9J7DDxStG+THFWARHGlsilrga8suCancA6AdZZsGPJGEYAMQLcs+UZe7MXDw+sNuZi1XkC2LTDAO0qQH1cZBEHdAj+UBZClLAu8Go+N3Z/FywIfKop4ux2I+G82k32J4NXqoAUeN0EwLmnYkL8UCDjfJAMRTkZicWCmANBvlvxMLGx9/0mJt0S2ZZ5Z35/OQj2noN6WWux8CS3PrwixyoqiDHK+hOudT2QLgh2Kt8xkWSRTw1KKp/POMSCWUFxeFBKWcLnFRAFh+JAy/3MWA5MJJAw35M1nrlF8PRGqUtlUAkiz5aBW58sCWeoKkDDcXMK1lsoDKXCtpMvh7lq+6lpB8LzrPpZcKO1aasXr+9tTixTf5FqCUAK7zRq+v1WEK2GRqVSJOxU+0+7pF9ifzk+U0KSMeQlsiQkZqSWcQdhljU+kvF9SgHyeBSRbUOCE5iaJluv1jZZ8wgKflAQqgp6NguApqXTzeFjgpKLkt9o+ll6s8vH1vBJlFUPy5RJuc9Rlz7jRGNBSvzQv2hfUalvUojFrgQYG+NTFEq77NYExRRE2s2gUMsBXeUHnBITcVQRE3Ml1PwN8qyjjjL6I3KsyJ3e7MJYzZC3njEsJnyr3BU+j5ODRz4tLRUG5QkVAnBUCXMmp5TbkCwEcyhFish9AYs+7y5Kn1D2AA8WaWLaKWm5Lq6bXQAxwNAfEnHPHURoNBanzSK+AGPLNnGz3R0Q+7QSiZcP3CgSa1GKmEyBpkjiVq0DyWCkQLQ87F3KFAi5nNSbk2pzWZgtSwaaVs/yeWik72rKTHthx6gXfFQa4CgYY0m6Of2NyToRxrQCSvRuNAakmtHPCrh6zUgF7XXjoKQSTmn5RGgXJHTsIdsjjjmgxGfLQA+xMCkDgZIkb5+wS+eiaQPylPWCo0M16MMyyO63NEtpjqGSOvgABPujp27u8T7i6WocAZkqn2E4pvUMfLHtRKhjzSV/4H/kHhLhbEOxJ/18SlY4BMpIqVgrAjlNrt0nuBpKCpY2ZduKnpaHR8qcaaW78KNdTudnJHce1Cr5D3n+Q/gT6tkvPlYTKQwAAAABJRU5ErkJggg=="
+          />
+          HVAC
+        </span>
+        <div class="nav-content">
+          <div class="nav-content1">
+            <a href="index.html"><span class="pg-home">HOME</span></a>
+            <a href="cars.html"><span class="pg-cars">CARS</span></a>
+            <a href="blog.html"><span class="pg-blog">BLOG</span></a>
+            <a
+              ><span class="pg-pages">PAGES</span>
+              <div class="dropDown">
+                <ul>
+                  <li onclick="aboutOpen()">About Us</li>
+                  <li onclick="carOpen()">Car Details</li>
+                  <li onclick="blogOpen()">Blog Details</li>
+                </ul>
+              </div>
+            </a>
+            <a href="about.html"><span class="pg-about">ABOUT</span></a>
+            <a href="contact.html"><span class="pg-contact">CONTACT</span></a>
+          </div>
+          <div class="nav-content2">
+            <span
+              ><a href="#"> <i class="fa-solid fa-cart-plus"></i></a> </span
+            ><span
+              ><a href="#">
+                <i class="fa-solid fa-magnifying-glass"></i
+              ></a> </span
+            ><span class="btn1"><a href="#"> Add Car</a> </span>
+          </div>
+        </div>
+        <i onclick="showSidebar()" class="fa-solid fa-bars menu"></i>
+      </div>
+    </nav>
+
+    <div class="sidebarfull">
+      <div class="sidebar">
+        <div class="nav-content2">
+          <span onclick="hideSidebar()"> <i class="fa-solid fa-plus"></i> </span
+          ><span> <i class="fa-solid fa-magnifying-glass"></i> </span
+          ><span class="btn1"> Add Car </span>
+        </div>
+        <span class="logo">
+          <img
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAFFElEQVR4nO1azYscRRRvSTYq0SRrdMWT/g35AEHJHhQdM7s7/fs1LSZOsp4GFEJC8KgYzEnXS1AEIcEoi8GLBxONnmSDAQkexf3Ix2HXJBuUXIybqWqx5fX2yqzTr7t6dmb8IA8KBqqr3vu9r3r1ajzvDv1PKa5WB5ukb8gJA3xhgRlD3jSASQZ50wLTMiffNH2/FtdqW7x/A8WVyt0GeNEAXxvgd0vGZYasMeRZQ+6Vvby+AwjDey152JJXywqvDuAnCxyKx8fv6QuIyPefs+SlrgFoB3QxIp/trRuRx3oGoB3Qx2L57oIYHX3Ykt/3DQTTGCIvxMBQV0DcrtUeE3M7Mr5mgeOG3GeAbbHvb40bjYFkjIw8aH1/uwH2W+CEAa47WmZOZFi7JRxAGOCbCKjGYbjOee/h4fWR748YYMoFTNypZSR7FLpTlwIzIncXJRAjbtZJijbA+wWa+iiu1zd6XaI4DO+z5GSB5d/tJMXmWeJ1r0dkgCN5vKMgeMZpIzGfJWdzNnutVyCcwAAXnQ7N9MRW3cnrE9l8NzvoYo2rqia6GBNOMQNcVoAs5Aa+FICqb/aybFAoAqpq4AfBHnWhVLHaOeHKPA7DByzwiiFPi0YNcEuGBa4Y8owFDpQ5EwxwTknHX2YLUK0OaqW4aMYBwOb0LvKrwwF6W9J7DDxStG+THFWARHGlsilrga8suCancA6AdZZsGPJGEYAMQLcs+UZe7MXDw+sNuZi1XkC2LTDAO0qQH1cZBEHdAj+UBZClLAu8Go+N3Z/FywIfKop4ux2I+G82k32J4NXqoAUeN0EwLmnYkL8UCDjfJAMRTkZicWCmANBvlvxMLGx9/0mJt0S2ZZ5Z35/OQj2noN6WWux8CS3PrwixyoqiDHK+hOudT2QLgh2Kt8xkWSRTw1KKp/POMSCWUFxeFBKWcLnFRAFh+JAy/3MWA5MJJAw35M1nrlF8PRGqUtlUAkiz5aBW58sCWeoKkDDcXMK1lsoDKXCtpMvh7lq+6lpB8LzrPpZcKO1aasXr+9tTixTf5FqCUAK7zRq+v1WEK2GRqVSJOxU+0+7pF9ifzk+U0KSMeQlsiQkZqSWcQdhljU+kvF9SgHyeBSRbUOCE5iaJluv1jZZ8wgKflAQqgp6NguApqXTzeFjgpKLkt9o+ll6s8vH1vBJlFUPy5RJuc9Rlz7jRGNBSvzQv2hfUalvUojFrgQYG+NTFEq77NYExRRE2s2gUMsBXeUHnBITcVQRE3Ml1PwN8qyjjjL6I3KsyJ3e7MJYzZC3njEsJnyr3BU+j5ODRz4tLRUG5QkVAnBUCXMmp5TbkCwEcyhFish9AYs+7y5Kn1D2AA8WaWLaKWm5Lq6bXQAxwNAfEnHPHURoNBanzSK+AGPLNnGz3R0Q+7QSiZcP3CgSa1GKmEyBpkjiVq0DyWCkQLQ87F3KFAi5nNSbk2pzWZgtSwaaVs/yeWik72rKTHthx6gXfFQa4CgYY0m6Of2NyToRxrQCSvRuNAakmtHPCrh6zUgF7XXjoKQSTmn5RGgXJHTsIdsjjjmgxGfLQA+xMCkDgZIkb5+wS+eiaQPylPWCo0M16MMyyO63NEtpjqGSOvgABPujp27u8T7i6WocAZkqn2E4pvUMfLHtRKhjzSV/4H/kHhLhbEOxJ/18SlY4BMpIqVgrAjlNrt0nuBpKCpY2ZduKnpaHR8qcaaW78KNdTudnJHce1Cr5D3n+Q/gT6tkvPlYTKQwAAAABJRU5ErkJggg=="
+          />
+          HVAC
+        </span>
+        <div class="nav-content1">
+          <a href="index.html"><span>HOME</span></a>
+          <a href="cars.html"><span>CARS</span></a>
+          <a href="blog.html"><span>BLOG</span></a>
+          <a
+            ><span class="mob-btn-dropdown">PAGES</span>
+            <div class="mob-dropdown">
+              <ul>
+                <a href="about.html">
+                  <li>About Us</li>
+                </a>
+                <a href="cars.html">
+                  <li>Car Details</li>
+                </a>
+                <a href="blog.html">
+                  <li>Blog Details</li>
+                </a>
+              </ul>
+            </div>
+          </a>
+          <a href="about.html"><span>ABOUT</span></a>
+          <a href="contact.html"><span>CONTACT</span></a>
+        </div>
+        <div class="nav3">
+          <div class="info1">
+            <span>
+              <i class="fa-regular fa-clock medai2"></i>
+              Week day: 08:00 am to 18:00 pm
+            </span>
+            <span>
+              <i class="fa-regular fa-envelope medai2"></i>
+              Info.colorlib@gmail.com
+            </span>
+          </div>
+          <div class="info2">
+            <span>
+              <i class="fa-solid fa-phone medai2"></i>
+              (+12) 345 678 910
+            </span>
+            <span>
+              <i class="fa-brands fa-facebook-f media"></i>
+              <i class="fa-brands fa-twitter media"></i>
+              <i class="fa-brands fa-google media"></i>
+              <i class="fa-brands fa-instagram media"></i>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero">
+      <section>
+        <div class="hero-content-div">
+          <div class="hero-content-div-txt">
+            <h4>FIND YOUR DREAM CAR</h4>
+            <h2>Porsche Cayenne S</h2>
+            <span>Model 2019</span>
+            <h2>$399/Month</h2>
+            <div class="about-singing">
+              <a href="#" class="redBack">
+                <img
+                  class="drive"
+                  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAEDElEQVR4nO2ayUvVURTHX+RQaJZDRqv6GxogKNoYRdkgRKGNroICMaJlkeQqbRNFEBQNSNGmRdm0EqUgomWkDbbITKNoU9lg9IlDR3jYHX/v914DfeGCeH9n+P7uveeec34vk/mPfxRAJdAAdALXgQHgHfBFh/zdr3PyzAZgVuZPAFAKbAVuA9+Ih8jcBLaIrsxvIDAd2AcMkx5eAnuBaYUisRp4Rv7wFFiV7210jMLhgqx82iTmAA8oPO4DtWmRmK/LHYJXwGlgO7AAqAaKddQAC4EdwBlgJFDnE/EhjZUIIdED1ANTI3QXAWuB3kAytUlJTAvYTqkcTGBNQAC5nyhEAyc9is8DZbmSyLJXDnR5bB5PEmJdOJgWAYPtNo/tlTFh9rFD0YF8kQgk8zTo0tQb24bzmQIB9zZrDVmNYcebKCsgkXJg0OLLkPPgawJoQ/7SBrs/9Q5/mlyCksWa0BNhvArYA1zTN/pBx3OgG2iJuROAPotPN1z1hC0Vrw8wOFPrjPf48UnD+9wAvessOsaBCpOAFEW2tKPIYWgqsAt4TTxkpQ65zh4/M4BRi/w6k8BRy8OnHQa2AQ/JHfKy9gMzLLbOWuQ6TA/L/jVhe9bWWwLs1Fv9rce5F8BGcU5Hg5a/LnwErugKL5PzprbFpgnXTEQkMTNhgc7f9TgxmUSVwUalzoXirsotsswPmIjY3nC1zsecgY2WLS96NkXoGVWZ2Zb5NyYD0ukwocQzb4Jxr6ueigg9n7Muaut8LJGxlIhImA7FWBIivq0lXY5QNDiIbI7QM5Rka9ky3oU6H1LJTUCiU6XBRrXmSaHoVbnFlvn+mPC7Q+fl1o7BCz3YFTo2R5IQdKrtZsy4aiJic/SMbZuoXBmwFLhIPKTLWCeZrsfGOYv8EdPD0os1YcSVokzSsTuCRHugzmJH6F9rEpjlSBp/FbAbvhxA4maEvvUWHV+NSaMK3XIdukDDywOI1EXou2PR0e0Skq64DWsCDUtelfieCUzhBY0uwVLHffHMdyiz9DgR8UKeOyJiiU+BtPZt6CoEEWAKcMmhoiXEiVJPut1WACLtDvEnwR1HaTR4fGnLFxHgsEP0O7AiiESWwhMef7psZyYJET0Tlzyix6JIZG0xaRy7MGhqTGjZ3KspyZiOIf1fpyU62Q72BO55D7iDTK2jcsxGnzpTFKG7WLMJ2z2RDUloZyciMelDTwgZtNtxVmvsRfpxp0RHjWaxzZo7hVacj4F5OZGYtDK+bZYP3Mt5JRwfQyVyFAKn8vrtXb5PRGy1JBiIDrE5rk5rgkLJBUk7Wn7XLyCEUJP+vkR6sbEY18q0MXFoTRtazkoI7tBOfL82NCZ+VCN/P5LyVCo7/aIblAX/R+YvxA9A/ysDFRqF7wAAAABJRU5ErkJggg=="
+                />
+                Test Drive
+              </a>
+              <a href="#" class="whiteborderbutton">Learn More</a>
+            </div>
+          </div>
+          <div class="hero-content-div-form">
+            <div class="hero-form-btn">
+              <a href="#" id="carRental" onclick="extendpaddrent()"
+                >Car Rental</a
+              >
+              <a href="#" id="carBuy" onclick="extendpaddbuy()">Buy Car </a>
+            </div>
+            <div class="hero-form-car">
+              <div class="hero-form-car-head">
+                <h2>Find Your Dream Car</h2>
+              </div>
+              <div class="hero-form-car-input">
+                <div>
+                  <p>Select Year</p>
+                  <input type="text" />
+                </div>
+                <div>
+                  <p>Select Brand</p>
+                  <input type="text" />
+                </div>
+                <div>
+                  <p>Select Model</p>
+                  <input type="text" />
+                </div>
+                <div>
+                  <p>Select Mileage</p>
+                  <input type="text" />
+                </div>
+              </div>
+              <a href="#">
+                <div
+                  onclick="validateHeroForm()"
+                  class="hero-form-submit red-back"
+                >
+                  Searching
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <section>
+      <div data-aos="zoom-in" class="about-quarantee">
+        <h2>What We Offers</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor
+        </p>
+        <div class="about-quarantee-content">
+          <div data-aos="flip-up" class="about-quarantee-content1">
+            <span>
+              <img
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAEWUlEQVR4nO2aa4hVVRiGnxk1nbTMtCIthVGzm4qeEAbzh6KGIFHW+EcFQSetwSD9oaboD69pKqKgqRQpgohjhmmiYJSJ4g2S8I6llTciCy0d73zwLlls9plz9jl7nzPEeeFjzl7X/a713dbaAyWUUELcaAp0BVJZyqtABY0InYB1QD1wP6LcBXYDVcUm8SJwQS/1HbAImJ+lfALUAbeAm8CbxSTyA3AbeDePMXoAl4E/gScoAoZoJ1bEMNYojTWbAqKVtxumFh1jGLMJcAq4CjwOtATKGtjBOu3iRWA90CXqhCkZ6D6t4F5gYEzymcY8pAWqDZm/L/Cv3uEIcFR9bAG6RyFiK7UxB+8UVQ6ErHIZcEyOob9X/paImYZEwhpN9jnwXswyA7inHW8WmLeb5l0d8k516tcuWxI1Gmyn9DoJfKo5zJX7eF3lk0L6zFbdy9lM0E7bah2uA6eBlUBbr80E4DzwVwa5IpuwbCCIZtqRe7IJh36ae2IaD3rAc0QN4hUNdBbY5Rnaz0BzSb08ya4Mclx9bZUd2kv3zfCnq36J5ww+8tx9KkT1soYjMssrcxOO0PMvWu1MK2OqeUfpjWGmDDaKQzjp9c+JyF4vzXCGb78N7+t5SwOpyXK1Mf9veEFq9BMwBZichSzVGF/kQyRMPlSb5rKdTKv5n/I05z6tbHTE9/kNOJgPEVvRSk+eC7SrCNSHSRuv/TCNOzIkgn+rnZoOlAfqTY0Px2UjcSCMiAXeP2RHl1RvHjFWIhZ8qhuQl9S+hbyQy5mq0rRfGEKkyls0cxyWYW+Li8jzMspM+m8xAKX29txZwfN6hn4+kWcVs84BmzxXHAsRFIzuy2u4FZ2jspV6NhtAfr6P17d3hB0xjJNTsLo9gcCbN5EBXvpQHjiXWPqSC9IZuyNjwTMs+OVFxPT+RBrVGJPjmG+rvx2uouDXfIgYngLmKp138iXQIcfxeojI98DwDI6kWjJR9rqBRoZVOZxZLsuTNjq8luVuVANDA0G1hDA0UTZamZB0SvAw9xDmOv8pwFn+b+/IEDueURT+PeJNY1RZpPzL5no6CSKD0iR1SWCC5rI5Y0cwsjfVBcE3Wkm7cHPpvR2meqYZxzzRMv1+EtjsHY3nBi4/hhSCyDw939bf7SpP6XmqnssDZ4xtOvOXKUE9o4s363O0GERO6/qzpV7OInBrxQlr97HafS1xOKn0h0Ci6XK7ghMZpeSyXLnQDSV9jshXuoy7oJtDp452Tbo1MPY09RlYDCJIPRar3Ol9lxB36oh0TnPm+BG4pruAghN5BFirsv3Ao17bXt491TmPyBtq/4HXto3szFe/ghLZ4q34RX3JCjtPHPOI1Kr9YK/+HZWNLxaRJfo04KQuTWoxRYLsx+zjMa/ePhPsCFxM1yRJZLAGD/ueETdqkwyI7eVx7Oi5IMEUZYHmqNflRCKokZtNOmm8AYwlYVQo/UglJD0b2z8YlFAC/wM8ABPNGHEQUvn0AAAAAElFTkSuQmCC"
+              />
+            </span>
+            <h5>Rental A Cars</h5>
+            <p>
+              Consectetur adipiscing elit incididunt ut labore et dolore magna
+              aliqua. Risus commodo viverra maecenas.
+            </p>
+            <i class="fa-solid fa-arrow-right rightarrow"></i>
+          </div>
+          <div data-aos="flip-down" class="about-quarantee-content1">
+            <span>
+              <img
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAABQCAYAAACOEfKtAAAACXBIWXMAAAsTAAALEwEAmpwYAAAEu0lEQVR4nO2bzY8URRiHH3GDrh+AQSABlQO6xpNeTIxAdA9+RE8Qid50/bpoCAcUOSoY9UKiJEb9D8yyrlGMohCNqwcRxAQVFzVGA4YQFXYX1Bh1zKu/Siqd7tnpmZ2equl6kkq2q6e3fu/bVW9Vvd0NiUQikUhEwCXACPA68DVwBvgN+AEYBx4EFvZaZIgMAluB00BjlnIKeBwY6LXoUFgOfOo5aI962tXAhXLuKuBenftHv/sIWErNWQ78KIfYkF3TwjWrgUld8xVwKTVl0Ot57wOLVG+9ahtwSDFwIufaBcCHunYfMI8aslUOOOI57y5gOhPzzFEUOPGofvMwNZxtT8v4NZ7zXHyzGfcmxcBmrC2YaA6rJy/V37PV++eiYMSbMJBw1/MeK/m/3m7ixMMl6qNy4rgEP6DjbV7P8/m4IAY2o9Ve5zvLPxeFEycl1pYqxuc6tmHrM9EkBjbDOSTrjKL6PCcGzbSEXpw5vqjN/5fXU12vo8V6d8710Fo5cKLNnhqtAyczQ/iQjm+egxjYLlEN4XEJtS2b8ZSOLYnQjZ41G9FNIiMS+66OlwBTqtsyR8uYdkoUznML6VMSbYthYz3wt+reAIZbiIlr6+g8xxNeEsFt5dblpLSKYqDlBb+p61bOOB/YLwd8oF6JsitPAgeBmYIYuFDpLLt2b12TCdl01mTOQrpo2Lokwpd1Tmf5TvzEG7LvaUheoxh4AXCVJp69mSyNTT4J/h/OW7yJpVn5VQmHlNLPYZFS968pTzijh0rfA2PA/d7uJZFIJBKJ/xjQBGFP6c7O4fasqJzVIv6+fpjNFwMHKnBaUTkgDVFyHvCZDLHdxYaKjFmsto56TpxPhGzytnG92JIt8Zy4kcg4F/hO4q039IoN0vCtNEXDPYEIn+f1wruJiIMS/VCvhSh50dDj1XOIgFsl+IQSCSFMZj9J0y1EwL42n39UkSG3lFnQXC+hU14qPwQWeOm0GwiYXRL5LOHxnLSNEiirgL+AP5SJDo1lwO96OmhZ8OB4RXf4ZcIlGI22tnsU+AL409t72t0dIlyGvOfTDWk3Gx6per36UsHmfRfh4+J0trxYlYDr1OAMcEfkKSPTfqdsMZuuraLR7WpsB/3DDtlktnWdPWpsHf3Detn0ThWNncyJH2e0TMi+8xfq8TJpztphtnWVKwoC8PaCd/5CPnahKFvMxkq43XubwL08FBP2EtPPsuG2XgjYr8Y3Ey+bZYO9v1Mp7uXHX/RdXKwMyoaGPnSsjBfU6M6cc5dpwz6tMtajvWerOnbKluerFOceVQ7niHZ31C9WtyLz27l+hNmujmGds+fWleFe1V2ZqR9V/ZsSamW36l6t0IFldKxUveULK8NtyAcy9e6jGv8uX646c3pVlNEx4CVCKiPvruN9zmBDqJcOLKujyJ6uUdTgmOp3S7yVtwoywd0cwmV0NLOnaxQ1OOQtTrPB+8oKHVhGRzN7ukazBlcoUE+pjBaI7jZldATlwBhJDuyQ5MAOSQ7skOTADkkO7CcHNgIvZe3pCsmBHRLU3YxRc1BiYtR8XA3emKlfrfpjhEdQmp+ZJVA/TXgEpXm+BB3PiDgmISF+2BKj5kQikUjQx/wL3iYyOS5NOj4AAAAASUVORK5CYII="
+              />
+            </span>
+            <h5>Buying A Cars</h5>
+            <p>
+              Consectetur adipiscing elit incididunt ut labore et dolore magna
+              aliqua. Risus commodo viverra maecenas.
+            </p>
+            <i class="fa-solid fa-arrow-right rightarrow"></i>
+          </div>
+          <div data-aos="flip-up" class="about-quarantee-content1">
+            <span>
+              <img
+                src="https://static.vecteezy.com/system/resources/thumbnails/025/366/463/small/customisation-icon-customize-illustration-sign-mechanical-symbol-settings-logo-option-mark-vector.jpg"
+                alt="integrated"
+              />
+            </span>
+            <h5>Car Maintenance</h5>
+            <p>
+              Consectetur adipiscing elit incididunt ut labore et dolore magna
+              aliqua. Risus commodo viverra maecenas.
+            </p>
+            <i class="fa-solid fa-arrow-right rightarrow"></i>
+          </div>
+          <div data-aos="flip-down" class="about-quarantee-content1">
+            <span>
+              <img
+                src="data:image/png;base64,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"
+              />
+            </span>
+            <h5>Support 24/7</h5>
+            <p>
+              Consectetur adipiscing elit incididunt ut labore et dolore magna
+              aliqua. Risus commodo viverra maecenas.
+            </p>
+            <i class="fa-solid fa-arrow-right rightarrow"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div
+      data-aos="fade-right"
+      data-aos-offset="300"
+      data-aos-easing="ease-in-sine"
+      class="redCarOuterDiv"
+    >
+      <section data-aos="zoom-in-up">
+        <div class="redCarInnerDiv">
+          <div class="redcarcontent">
+            <span>Our Feature</span>
+            <h2>We Are a Trusted Name In Auto</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis
+              ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas
+              accumsan lacus vel facilisis.
+            </p>
+            <div class="btnRedCar">
+              <a href="#" class="red-back">About us</a>
+              <a href="#" class="black-back">Our Partners</a>
+            </div>
+          </div>
+          <div class="redcarbtn">
+            <a href="#">
+              <span>
+                <img
+                  src="https://themewagon.github.io/hvac/img/feature/feature-1.png"
+                  alt="image"
+                />
+                Engine
+              </span>
+            </a>
+            <a href="#">
+              <span>
+                <img
+                  src="https://themewagon.github.io/hvac/img/feature/feature-2.png"
+                  alt="image"
+                />
+                Turbo
+              </span>
+            </a>
+            <a href="#">
+              <span>
+                <img
+                  src="https://themewagon.github.io/hvac/img/feature/feature-3.png"
+                  alt="image"
+                />
+                Colling
+              </span>
+            </a>
+            <a href="#">
+              <span>
+                <img
+                  src="https://themewagon.github.io/hvac/img/feature/feature-4.png"
+                  alt="image"
+                />
+                Suspension
+              </span>
+            </a>
+            <a href="#">
+              <span>
+                <img
+                  src="https://themewagon.github.io/hvac/img/feature/feature-5.png"
+                  alt="image"
+                />
+                Electrical
+              </span>
+            </a>
+            <a href="#">
+              <span>
+                <img
+                  src="https://themewagon.github.io/hvac/img/feature/feature-6.png"
+                  alt="image"
+                />
+                Brakes
+              </span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <section>
+      <div class="blog">
+        <div class="blog-car-innerdiv">
+          <div class="blog-car-innerdiv1">
+            <div class="blog-car-innerdiv-search">
+              <span>Our Car</span>
+              <h2>Best Vehicle Offers</h2>
+              <ul class="blog-car-list">
+                <li class="highlight">Most Reserached</li>
+                <li>Latest on Sale</li>
+              </ul>
+            </div>
+          </div>
+          <div class="cars">
+            <div data-aos="zoom-out" class="blog-car">
+              <div class="car-img1"></div>
+              <div class="car-content">
+                <p>2016</p>
+                <a href="#"><h5>Porsche cayenne turbo s</h5></a>
+                <ul>
+                  <li>35,000 mi</li>
+                  <li>Auto</li>
+                  <li>700 hp</li>
+                </ul>
+              </div>
+              <div class="blog-car-price">
+                <a href="#" class="buy-rent rent-car">For Rent</a>
+                <a href="#" class="buy-fullprice">$218/Month</a>
+              </div>
+            </div>
+            <div data-aos="zoom-out" class="blog-car">
+              <div class="car-img2"></div>
+              <div class="car-content">
+                <p>2020</p>
+                <a href="#"><h5>Toyota camry asv50l</h5></a>
+                <ul>
+                  <li>35,000 mi</li>
+                  <li>Auto</li>
+                  <li>700 hp</li>
+                </ul>
+              </div>
+              <div class="blog-car-price">
+                <a href="#" class="buy-rent buywithfullprice">For Rent</a>
+                <a href="#" class="buy-fullprice">$73,900</a>
+              </div>
+            </div>
+            <div data-aos="zoom-out" class="blog-car">
+              <div class="car-img3"></div>
+              <div class="car-content">
+                <p>2017</p>
+                <a href="#"><h5>Bmw s1000rr 2019 m</h5></a>
+                <ul>
+                  <li>35,000 mi</li>
+                  <li>Auto</li>
+                  <li>700 hp</li>
+                </ul>
+              </div>
+              <div class="blog-car-price">
+                <a href="#" class="buy-rent rent-car">For Rent</a>
+                <a href="#" class="buy-fullprice">$299/Month</a>
+              </div>
+            </div>
+            <div data-aos="zoom-out" class="blog-car">
+              <div class="car-img4"></div>
+              <div class="car-content">
+                <p>2018</p>
+                <a href="#"><h5>Audi q8 2020</h5></a>
+                <ul>
+                  <li>35,000 mi</li>
+                  <li>Auto</li>
+                  <li>700 hp</li>
+                </ul>
+              </div>
+              <div class="blog-car-price">
+                <a href="#" class="buy-rent buywithfullprice">For Rent</a>
+                <a href="#" class="buy-fullprice">$319/Month</a>
+              </div>
+            </div>
+            <div data-aos="zoom-out" class="blog-car">
+              <div class="car-img5"></div>
+              <div class="car-content">
+                <p>2016</p>
+                <a href="#"><h5>Mustang shelby gt500</h5></a>
+                <ul>
+                  <li>35,000 mi</li>
+                  <li>Auto</li>
+                  <li>700 hp</li>
+                </ul>
+              </div>
+              <div class="blog-car-price">
+                <a href="#" class="buy-rent rent-car">For Rent</a>
+                <a href="#" class="buy-fullprice">$730,900</a>
+              </div>
+            </div>
+            <div data-aos="zoom-out" class="blog-car">
+              <div class="car-img6"></div>
+              <div class="car-content">
+                <p>2019</p>
+                <a href="#"><h5>Lamborghini huracan evo</h5></a>
+                <ul>
+                  <li>35,000 mi</li>
+                  <li>Auto</li>
+                  <li>700 hp</li>
+                </ul>
+              </div>
+              <div class="blog-car-price">
+                <a href="#" class="buy-rent buywithfullprice">For Rent</a>
+                <a href="#" class="buy-fullprice">$318/Month</a>
+              </div>
+            </div>
+            <div data-aos="zoom-out" class="blog-car">
+              <div class="car-img1"></div>
+              <div class="car-content">
+                <p>2020</p>
+                <a href="#"><h5>Lamborghini huracan evo</h5></a>
+                <ul>
+                  <li>35,000 mi</li>
+                  <li>Auto</li>
+                  <li>700 hp</li>
+                </ul>
+              </div>
+              <div class="blog-car-price">
+                <a href="#" class="buy-rent rent-car">For Rent</a>
+                <a href="#" class="buy-fullprice">$120,000</a>
+              </div>
+            </div>
+            <div data-aos="zoom-out" class="blog-car">
+              <div class="car-img1"></div>
+              <div class="car-content">
+                <p>2016</p>
+                <a href="#"><h5>Porsche cayenne turbo s</h5></a>
+                <ul>
+                  <li>35,000 mi</li>
+                  <li>Auto</li>
+                  <li>700 hp</li>
+                </ul>
+              </div>
+              <div class="blog-car-price">
+                <a href="#" class="buy-rent buywithfullprice">For Rent</a>
+                <a href="#" class="buy-fullprice">$218/Month</a>
+              </div>
+            </div>
+            <div data-aos="zoom-out" class="blog-car">
+              <div class="car-img1"></div>
+              <div class="car-content">
+                <p>2016</p>
+                <a href="#"><h5>Porsche cayenne turbo s</h5></a>
+                <ul>
+                  <li>35,000 mi</li>
+                  <li>Auto</li>
+                  <li>700 hp</li>
+                </ul>
+              </div>
+              <div class="blog-car-price">
+                <a href="#" class="buy-rent rent-car">For Rent</a>
+                <a href="#" class="buy-fullprice">$218/Month</a>
+              </div>
+            </div>
+            <div data-aos="zoom-out" class="blog-car">
+              <div class="car-img3"></div>
+              <div class="car-content">
+                <p>2017</p>
+                <a href="#"><h5>Bmw s1000rr 2019 m</h5></a>
+                <ul>
+                  <li>35,000 mi</li>
+                  <li>Auto</li>
+                  <li>700 hp</li>
+                </ul>
+              </div>
+              <div class="blog-car-price">
+                <a href="#" class="buy-rent rent-car">For Rent</a>
+                <a href="#" class="buy-fullprice">$299/Month</a>
+              </div>
+            </div>
+            <div data-aos="zoom-out" class="blog-car">
+              <div class="car-img3"></div>
+              <div class="car-content">
+                <p>2017</p>
+                <a href="#"><h5>Bmw s1000rr 2019 m</h5></a>
+                <ul>
+                  <li>35,000 mi</li>
+                  <li>Auto</li>
+                  <li>700 hp</li>
+                </ul>
+              </div>
+              <div class="blog-car-price">
+                <a href="#" class="buy-rent rent-car">For Rent</a>
+                <a href="#" class="buy-fullprice">$299/Month</a>
+              </div>
+            </div>
+            <div data-aos="zoom-out" class="blog-car">
+              <div class="car-img4"></div>
+              <div class="car-content">
+                <p>2018</p>
+                <a href="#"><h5>Audi q8 2020</h5></a>
+                <ul>
+                  <li>35,000 mi</li>
+                  <li>Auto</li>
+                  <li>700 hp</li>
+                </ul>
+              </div>
+              <div class="blog-car-price">
+                <a href="#" class="buy-rent buywithfullprice">For Rent</a>
+                <a href="#" class="buy-fullprice">$319/Month</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div data-aos="fade-up" class="request-call">
+      <div class="req-call-inner-content">
+        <div class="request-call-content">
+          <h2>Why People Choose Us</h2>
+          <p>
+            Posters had been a very beneficial marketing tool because it had
+            paved to deliver an effective message that conveyed customer’s
+          </p>
+          <a href="about.html" class="submit">About Us</a>
+        </div>
+      </div>
+    </div>
+
+    <section>
+      <div class="latestNews">
+        <div data-aos="zoom-out-right" class="latestNewsHead">
+          <span>Our Blog</span>
+          <h2>Latest News Updates</h2>
+          <p>
+            Sign up for the latest Automobile Industry information and more.
+            Duis aute irure dolorin reprehenderits volupta velit dolore fugiat.
+          </p>
+        </div>
+        <div class="cars-second-content">
+          <div data-aos="zoom-out" class="blog-car">
+            <div class="car-img1">
+              <ul>
+                <li>By Polly Williams</li>
+                <li>Dec 11, 2018</li>
+                <li>8 Comment</li>
+              </ul>
+            </div>
+            <div class="cars-second-content2">
+              <a href="#"><h5>Benjamin Franklin S Method Of</h5></a>
+              <p>
+                Great business ideas when utilized effectively can save lots of
+                money. This is not only easy for those who work full-time as an
+                advertiser...
+              </p>
+              <a href="#">
+                <p>
+                  View More
+                  <i class="fa-solid fa-arrow-right rightarrow-car"></i>
+                </p>
+              </a>
+            </div>
+          </div>
+          <div data-aos="zoom-out-up" class="blog-car">
+            <div class="car-img2">
+              <ul>
+                <li>By Evelyn Lane</li>
+                <li>Dec 17, 2018</li>
+                <li>11 Comment</li>
+              </ul>
+            </div>
+            <div class="cars-second-content2">
+              <a href="#"><h5>Where To Look For Cheap Brochure</h5></a>
+              <p>
+                Usually potential customers will visit home for business
+                dealing. Print good amount of fliers and give it to anyone who
+                is visiting home like family...
+              </p>
+              <a href="#">
+                <p>
+                  View More
+                  <i class="fa-solid fa-arrow-right rightarrow-car"></i>
+                </p>
+              </a>
+            </div>
+          </div>
+          <div data-aos="zoom-out-right" class="blog-car">
+            <div class="car-img3">
+              <ul>
+                <li>By Jessie Palmer</li>
+                <li>Dec 19, 2018</li>
+                <li>18 Comment</li>
+              </ul>
+            </div>
+            <div class="cars-second-content2">
+              <a href="#"><h5>Promotional Advertising Specialty</h5></a>
+              <p>
+                For those who work outside home, employ college students to
+                distribute fliers at supermarkets, community centers...
+              </p>
+              <a href="#">
+                <p>
+                  View More
+                  <i class="fa-solid fa-arrow-right rightarrow-car"></i>
+                </p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="rentOrBuy">
+        <div data-aos="fade-up" class="buyACar">
+          <h4>Do You Want To Buy A Car</h4>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod
+          </p>
+        </div>
+        <div data-aos="fade-right" class="rentACar">
+          <h4>Do You Want To Rent A Car</h4>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <footer data-aos="zoom-in">
+      <div class="footer">
+        <div data-aos="fade-down" class="contact">
+          <h2>Contact Us Now!</h2>
+          <div>
+            <span>
+              <a href="#" class="call">
+                <i class="fa-solid fa-phone"></i>
+                (+12) 345 678 910
+              </a>
+            </span>
+            <span>
+              <a href="#" class="mail">
+                <i class="fa-regular fa-envelope medai2"></i>
+                Colorlib@gmail.com
+              </a>
+            </span>
+          </div>
+        </div>
+        <div data-aos="fade-up" class="footer-content">
+          <div class="footer-content1">
+            <h2>
+              <span> HVAC </span>
+            </h2>
+            <p>
+              Any questions? Let us know in store at 625 Gloria Union,
+              California, United Stated or call us on (+1) 96 123 8888
+            </p>
+            <p>
+              <span>
+                <i
+                  style="background-color: #324975"
+                  class="fa-brands fa-facebook-f media3"
+                ></i>
+                <i
+                  style="background: #2c85ae"
+                  class="fa-brands fa-twitter media3"
+                ></i>
+                <i
+                  style="background: #dc4438"
+                  class="fa-brands fa-google media3"
+                ></i>
+                <i
+                  style="background: #3eaff0"
+                  class="fa-brands fa-skype media3"
+                ></i>
+              </span>
+            </p>
+            <p>
+              <span>Copyright &copy; 2024 Colorlib</span>
+            </p>
+          </div>
+          <div class="footer-content2">
+            <h5>Infomation</h5>
+            <ul>
+              <li><a href="#">> Purchase</a></li>
+              <li><a href="#">> Payment</a></li>
+              <li><a href="#">> Shipping</a></li>
+              <li><a href="#">> Return</a></li>
+            </ul>
+          </div>
+          <div class="footer-content2">
+            <h5>Infomation</h5>
+            <ul>
+              <li><a href="#">> Hatchback</a></li>
+              <li><a href="#">> Sedan</a></li>
+              <li><a href="#">> SUV</a></li>
+              <li><a href="#">> Crossover</a></li>
+            </ul>
+          </div>
+          <div class="footer-content2">
+            <h5>Top Brand</h5>
+            <ul>
+              <li><a href="#">> Abarth</a></li>
+              <li><a href="#">> Acura</a></li>
+              <li><a href="#">> Alfa Romeo</a></li>
+              <li><a href="#">> Audi</a></li>
+            </ul>
+          </div>
+          <div class="footer-content2">
+            <h5></h5>
+            <ul>
+              <li><a href="#">> BMW</a></li>
+              <li><a href="#">> Chevrolet</a></li>
+              <li><a href="#">> Ferrari</a></li>
+              <li><a href="#">> Honda</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        offset: 300,
+        duration: 1000,
+      });
+    </script>
+  </body>
+</html>

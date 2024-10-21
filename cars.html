@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cars</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="cars.css" />
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <nav>
+      <div class="nav1">
+        <div class="info1">
+          <span>
+            <i class="fa-regular fa-clock medai2"></i>
+            Week day: 08:00 am to 18:00 pm
+          </span>
+          <span>
+            <i class="fa-regular fa-envelope medai2"></i>
+            Info.colorlib@gmail.com
+          </span>
+        </div>
+        <div class="info2">
+          <span>
+            <i class="fa-solid fa-phone medai2"></i>
+            (+12) 345 678 910
+          </span>
+          <span>
+            <i class="fa-brands fa-facebook-f media"></i>
+            <i class="fa-brands fa-twitter media"></i>
+            <i class="fa-brands fa-google media"></i>
+            <i class="fa-brands fa-instagram media"></i>
+          </span>
+        </div>
+      </div>
+      <div class="nav2">
+        <span class="logo">
+          <img
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAFFElEQVR4nO1azYscRRRvSTYq0SRrdMWT/g35AEHJHhQdM7s7/fs1LSZOsp4GFEJC8KgYzEnXS1AEIcEoi8GLBxONnmSDAQkexf3Ix2HXJBuUXIybqWqx5fX2yqzTr7t6dmb8IA8KBqqr3vu9r3r1ajzvDv1PKa5WB5ukb8gJA3xhgRlD3jSASQZ50wLTMiffNH2/FtdqW7x/A8WVyt0GeNEAXxvgd0vGZYasMeRZQ+6Vvby+AwjDey152JJXywqvDuAnCxyKx8fv6QuIyPefs+SlrgFoB3QxIp/trRuRx3oGoB3Qx2L57oIYHX3Ykt/3DQTTGCIvxMBQV0DcrtUeE3M7Mr5mgeOG3GeAbbHvb40bjYFkjIw8aH1/uwH2W+CEAa47WmZOZFi7JRxAGOCbCKjGYbjOee/h4fWR748YYMoFTNypZSR7FLpTlwIzIncXJRAjbtZJijbA+wWa+iiu1zd6XaI4DO+z5GSB5d/tJMXmWeJ1r0dkgCN5vKMgeMZpIzGfJWdzNnutVyCcwAAXnQ7N9MRW3cnrE9l8NzvoYo2rqia6GBNOMQNcVoAs5Aa+FICqb/aybFAoAqpq4AfBHnWhVLHaOeHKPA7DByzwiiFPi0YNcEuGBa4Y8owFDpQ5EwxwTknHX2YLUK0OaqW4aMYBwOb0LvKrwwF6W9J7DDxStG+THFWARHGlsilrga8suCancA6AdZZsGPJGEYAMQLcs+UZe7MXDw+sNuZi1XkC2LTDAO0qQH1cZBEHdAj+UBZClLAu8Go+N3Z/FywIfKop4ux2I+G82k32J4NXqoAUeN0EwLmnYkL8UCDjfJAMRTkZicWCmANBvlvxMLGx9/0mJt0S2ZZ5Z35/OQj2noN6WWux8CS3PrwixyoqiDHK+hOudT2QLgh2Kt8xkWSRTw1KKp/POMSCWUFxeFBKWcLnFRAFh+JAy/3MWA5MJJAw35M1nrlF8PRGqUtlUAkiz5aBW58sCWeoKkDDcXMK1lsoDKXCtpMvh7lq+6lpB8LzrPpZcKO1aasXr+9tTixTf5FqCUAK7zRq+v1WEK2GRqVSJOxU+0+7pF9ifzk+U0KSMeQlsiQkZqSWcQdhljU+kvF9SgHyeBSRbUOCE5iaJluv1jZZ8wgKflAQqgp6NguApqXTzeFjgpKLkt9o+ll6s8vH1vBJlFUPy5RJuc9Rlz7jRGNBSvzQv2hfUalvUojFrgQYG+NTFEq77NYExRRE2s2gUMsBXeUHnBITcVQRE3Ml1PwN8qyjjjL6I3KsyJ3e7MJYzZC3njEsJnyr3BU+j5ODRz4tLRUG5QkVAnBUCXMmp5TbkCwEcyhFish9AYs+7y5Kn1D2AA8WaWLaKWm5Lq6bXQAxwNAfEnHPHURoNBanzSK+AGPLNnGz3R0Q+7QSiZcP3CgSa1GKmEyBpkjiVq0DyWCkQLQ87F3KFAi5nNSbk2pzWZgtSwaaVs/yeWik72rKTHthx6gXfFQa4CgYY0m6Of2NyToRxrQCSvRuNAakmtHPCrh6zUgF7XXjoKQSTmn5RGgXJHTsIdsjjjmgxGfLQA+xMCkDgZIkb5+wS+eiaQPylPWCo0M16MMyyO63NEtpjqGSOvgABPujp27u8T7i6WocAZkqn2E4pvUMfLHtRKhjzSV/4H/kHhLhbEOxJ/18SlY4BMpIqVgrAjlNrt0nuBpKCpY2ZduKnpaHR8qcaaW78KNdTudnJHce1Cr5D3n+Q/gT6tkvPlYTKQwAAAABJRU5ErkJggg=="
+          />
+           HVAC </span>
+        <div class="nav-content">
+          <div class="nav-content1">
+            <a href="index.html"><span class="pg-home">HOME</span></a>
+            <a href="cars.html"><span class="pg-cars">CARS</span></a>
+            <a href="blog.html"><span class="pg-blog">BLOG</span></a>
+            <a class="PAGES"><span class="pg-pages">PAGES</span>
+              <div class="dropDown">
+                <ul>
+                  <li onclick="aboutOpen()">About Us</li>
+                <li onclick="carOpen()">Car Details</li>
+                <li onclick="blogOpen()">Blog Details</li>
+                </ul>
+              </div>
+            </a>
+            <a href="about.html"><span class="pg-about">ABOUT</span></a>
+            <a href="contact.html"><span class="pg-contact">CONTACT</span></a>
+          </div>
+          <div class="nav-content2">
+            <span
+              ><a href="#"> <i class="fa-solid fa-cart-plus"></i></a> </span
+            ><span
+              ><a href="#">
+                <i class="fa-solid fa-magnifying-glass"></i
+              ></a> </span
+            ><span class="btn1"><a href="#"> Add Car</a> </span>
+          </div>
+        </div>
+        <i onclick="showSidebar()" class="fa-solid fa-bars menu"></i>
+      </div>
+    </nav>
+
+    <div class="sidebarfull">
+      <div class="sidebar">
+        <div class="nav-content2">
+          <span onclick="hideSidebar()"> <i class="fa-solid fa-plus"></i> </span          ><span> <i class="fa-solid fa-magnifying-glass"></i> </span
+          ><span class="btn1"> Add Car </span>
+        </div>
+        <span class="logo">
+          <img
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAFFElEQVR4nO1azYscRRRvSTYq0SRrdMWT/g35AEHJHhQdM7s7/fs1LSZOsp4GFEJC8KgYzEnXS1AEIcEoi8GLBxONnmSDAQkexf3Ix2HXJBuUXIybqWqx5fX2yqzTr7t6dmb8IA8KBqqr3vu9r3r1ajzvDv1PKa5WB5ukb8gJA3xhgRlD3jSASQZ50wLTMiffNH2/FtdqW7x/A8WVyt0GeNEAXxvgd0vGZYasMeRZQ+6Vvby+AwjDey152JJXywqvDuAnCxyKx8fv6QuIyPefs+SlrgFoB3QxIp/trRuRx3oGoB3Qx2L57oIYHX3Ykt/3DQTTGCIvxMBQV0DcrtUeE3M7Mr5mgeOG3GeAbbHvb40bjYFkjIw8aH1/uwH2W+CEAa47WmZOZFi7JRxAGOCbCKjGYbjOee/h4fWR748YYMoFTNypZSR7FLpTlwIzIncXJRAjbtZJijbA+wWa+iiu1zd6XaI4DO+z5GSB5d/tJMXmWeJ1r0dkgCN5vKMgeMZpIzGfJWdzNnutVyCcwAAXnQ7N9MRW3cnrE9l8NzvoYo2rqia6GBNOMQNcVoAs5Aa+FICqb/aybFAoAqpq4AfBHnWhVLHaOeHKPA7DByzwiiFPi0YNcEuGBa4Y8owFDpQ5EwxwTknHX2YLUK0OaqW4aMYBwOb0LvKrwwF6W9J7DDxStG+THFWARHGlsilrga8suCancA6AdZZsGPJGEYAMQLcs+UZe7MXDw+sNuZi1XkC2LTDAO0qQH1cZBEHdAj+UBZClLAu8Go+N3Z/FywIfKop4ux2I+G82k32J4NXqoAUeN0EwLmnYkL8UCDjfJAMRTkZicWCmANBvlvxMLGx9/0mJt0S2ZZ5Z35/OQj2noN6WWux8CS3PrwixyoqiDHK+hOudT2QLgh2Kt8xkWSRTw1KKp/POMSCWUFxeFBKWcLnFRAFh+JAy/3MWA5MJJAw35M1nrlF8PRGqUtlUAkiz5aBW58sCWeoKkDDcXMK1lsoDKXCtpMvh7lq+6lpB8LzrPpZcKO1aasXr+9tTixTf5FqCUAK7zRq+v1WEK2GRqVSJOxU+0+7pF9ifzk+U0KSMeQlsiQkZqSWcQdhljU+kvF9SgHyeBSRbUOCE5iaJluv1jZZ8wgKflAQqgp6NguApqXTzeFjgpKLkt9o+ll6s8vH1vBJlFUPy5RJuc9Rlz7jRGNBSvzQv2hfUalvUojFrgQYG+NTFEq77NYExRRE2s2gUMsBXeUHnBITcVQRE3Ml1PwN8qyjjjL6I3KsyJ3e7MJYzZC3njEsJnyr3BU+j5ODRz4tLRUG5QkVAnBUCXMmp5TbkCwEcyhFish9AYs+7y5Kn1D2AA8WaWLaKWm5Lq6bXQAxwNAfEnHPHURoNBanzSK+AGPLNnGz3R0Q+7QSiZcP3CgSa1GKmEyBpkjiVq0DyWCkQLQ87F3KFAi5nNSbk2pzWZgtSwaaVs/yeWik72rKTHthx6gXfFQa4CgYY0m6Of2NyToRxrQCSvRuNAakmtHPCrh6zUgF7XXjoKQSTmn5RGgXJHTsIdsjjjmgxGfLQA+xMCkDgZIkb5+wS+eiaQPylPWCo0M16MMyyO63NEtpjqGSOvgABPujp27u8T7i6WocAZkqn2E4pvUMfLHtRKhjzSV/4H/kHhLhbEOxJ/18SlY4BMpIqVgrAjlNrt0nuBpKCpY2ZduKnpaHR8qcaaW78KNdTudnJHce1Cr5D3n+Q/gT6tkvPlYTKQwAAAABJRU5ErkJggg=="
+          />
+           HVAC </span>
+        <div class="nav-content1">
+          <a href="index.html"><span>HOME</span></a>
+          <a href="cars.html"><span>CARS</span></a>
+          <a href="blog.html"><span>BLOG</span></a>
+          <a><span class="mob-btn-dropdown">PAGES</span>
+            <div class="mob-dropdown">
+              <ul>
+                <a href="about.html">
+                  <li>About Us</li>
+                </a>
+                <a href="cars.html">
+                  <li>Car Details</li>
+                </a>
+                <a href="blog.html">
+                  <li>Blog Details</li>
+                </a>
+              </ul>
+            </div>
+          </a>
+          <a href="about.html"><span>ABOUT</span></a>
+          <a href="contact.html"><span>CONTACT</span></a>
+        </div>
+        <div class="nav3">
+          <div class="info1">
+            <span>
+              <i class="fa-regular fa-clock medai2"></i>
+              Week day: 08:00 am to 18:00 pm
+            </span>
+            <span>
+              <i class="fa-regular fa-envelope medai2"></i>
+              Info.colorlib@gmail.com
+            </span>
+          </div>
+          <div class="info2">
+            <span>
+              <i class="fa-solid fa-phone medai2"></i>
+              (+12) 345 678 910
+            </span>
+            <span>
+              <i class="fa-brands fa-facebook-f media"></i>
+              <i class="fa-brands fa-twitter media"></i>
+              <i class="fa-brands fa-google media"></i>
+              <i class="fa-brands fa-instagram media"></i>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero">
+      <div data-aos="fade-right" class="hero-content">
+        <p>Car Listing</p>
+        <div class="pages">
+          <a href="index.html" style="color: white">
+            <span>
+              <i class="fa-solid fa-house-chimney" style="color: red"></i>
+              Home ></span
+            ></a
+          >
+          <span class="pg">Cars</span>
+        </div>
+      </div>
+    </div>
+
+    <section>
+      <div class="blog">
+        <div class="blog-car-innerdiv">
+          <div class="blog-car-innerdiv1">
+            <div class="blog-car-innerdiv-search">
+              <h6>Show On Page</h6>
+              <select name="" id="">
+                <option value="">9 Car</option>
+                <option value="">15 Car</option>
+                <option value="">20 Car</option>
+              </select>
+            </div>
+            <div class="blog-car-innerdiv-search sideContent">
+              <h6>Sort By</h6>
+              <select name="" id="">
+                <option value="">Price:Highest Fist</option>
+                <option value="">Price:Lowest Fist</option>
+              </select>
+            </div>
+
+          </div>
+        <div class="cars">
+          <div data-aos="fade-up-right" class="blog-car">
+            <div class="car-img1">
+            </div>
+            <div class="car-content">
+              <p>2016</p>
+              <a href="#"><h5>Porsche cayenne turbo s</h5></a>
+              <ul>
+                <li>35,000 mi</li>
+                <li>Auto</li>
+                <li>700 hp</li>
+              </ul>
+            </div>
+            <div class="blog-car-price">
+              <a href="#" class="buy-rent rent-car">For Rent</a>
+              <a href="#" class="buy-fullprice">$218/Month</a>
+            </div>
+          </div>
+          <div data-aos="fade-up-right" class="blog-car">
+            <div class="car-img2">
+            </div>
+            <div class="car-content">
+              <p>2020</p>
+              <a href="#"><h5>Toyota camry asv50l-jeteku</h5></a>
+              <ul>
+                <li>35,000 mi</li>
+                <li>Auto</li>
+                <li>700 hp</li>
+              </ul>
+            </div>
+            <div class="blog-car-price">
+              <a href="#" class="buy-rent buywithfullprice">For Rent</a>
+              <a href="#" class="buy-fullprice">$73,900</a>
+            </div>
+          </div>
+          <div data-aos="fade-up-right" class="blog-car">
+            <div class="car-img3">
+            </div>
+            <div class="car-content">
+              <p>2017</p>
+              <a href="#"><h5>Bmw s1000rr 2019 m</h5></a>
+              <ul>
+                <li>35,000 mi</li>
+                <li>Auto</li>
+                <li>700 hp</li>
+              </ul>
+            </div>
+            <div class="blog-car-price">
+              <a href="#" class="buy-rent rent-car">For Rent</a>
+              <a href="#" class="buy-fullprice">$299/Month</a>
+            </div>
+          </div>
+          <div data-aos="fade-up-right" class="blog-car">
+            <div class="car-img4">
+            </div>
+            <div class="car-content">
+              <p>2018</p>
+              <a href="#"><h5>Audi q8 2020</h5></a>
+              <ul>
+                <li>35,000 mi</li>
+                <li>Auto</li>
+                <li>700 hp</li>
+              </ul>
+            </div>
+            <div class="blog-car-price">
+              <a href="#" class="buy-rent buywithfullprice">For Rent</a>
+              <a href="#" class="buy-fullprice">$319/Month</a>
+            </div>
+          </div>
+          <div data-aos="fade-up-right" class="blog-car">
+            <div class="car-img5">
+            </div>
+            <div class="car-content">
+              <p>2016</p>
+              <a href="#"><h5>Mustang shelby gt500</h5></a>
+              <ul>
+                <li>35,000 mi</li>
+                <li>Auto</li>
+                <li>700 hp</li>
+              </ul>
+            </div>
+            <div class="blog-car-price">
+              <a href="#" class="buy-rent rent-car">For Rent</a>
+              <a href="#" class="buy-fullprice">$730,900</a>
+            </div>
+          </div>
+          <div data-aos="fade-up-right" class="blog-car">
+            <div class="car-img6">
+            </div>
+            <div class="car-content">
+              <p>2019</p>
+              <a href="#"><h5>Lamborghini huracan evo</h5></a>
+              <ul>
+                <li>35,000 mi</li>
+                <li>Auto</li>
+                <li>700 hp</li>
+              </ul>
+            </div>
+            <div class="blog-car-price">
+              <a href="#" class="buy-rent buywithfullprice">For Rent</a>
+              <a href="#" class="buy-fullprice">$318/Month</a>
+            </div>
+          </div>
+          <div data-aos="fade-up-right" class="blog-car">
+            <div class="car-img1">
+            </div>
+            <div class="car-content">
+              <p>2020</p>
+              <a href="#"><h5>Lamborghini huracan evo</h5></a>
+              <ul>
+                <li>35,000 mi</li>
+                <li>Auto</li>
+                <li>700 hp</li>
+              </ul>
+            </div>
+            <div class="blog-car-price">
+              <a href="#" class="buy-rent rent-car">For Rent</a>
+              <a href="#" class="buy-fullprice">$120,000</a>
+            </div>
+          </div>
+          <div data-aos="fade-up-right" class="blog-car">
+            <div class="car-img1">
+            </div>
+            <div class="car-content">
+              <p>2016</p>
+              <a href="#"><h5>Porsche cayenne turbo s</h5></a>
+              <ul>
+                <li>35,000 mi</li>
+                <li>Auto</li>
+                <li>700 hp</li>
+              </ul>
+            </div>
+            <div class="blog-car-price">
+              <a href="#" class="buy-rent buywithfullprice">For Rent</a>
+              <a href="#" class="buy-fullprice">$218/Month</a>
+            </div>
+          </div>
+          <div data-aos="fade-up-right" class="blog-car">
+            <div class="car-img1">
+            </div>
+            <div class="car-content">
+              <p>2016</p>
+              <a href="#"><h5>Porsche cayenne turbo s</h5></a>
+              <ul>
+                <li>35,000 mi</li>
+                <li>Auto</li>
+                <li>700 hp</li>
+              </ul>
+            </div>
+            <div class="blog-car-price">
+              <a href="#" class="buy-rent rent-car">For Rent</a>
+              <a href="#" class="buy-fullprice">$218/Month</a>
+            </div>
+          </div>       
+         
+          <div class="pagination">
+            <a id="active" href="#">1 </a><a href="#">2 </a><a href="#">3 </a
+            ><a href="#"> >> </a>
+          </div>
+        </div>
+      </div>
+
+        <div class="news">
+          <div class="search-box">
+            <h5>Car Search</h5>
+            <span data-aos="fade-down" class="search">
+              <input type="text" placeholder="Search..." />
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </span>
+          </div>
+          
+          <div class="car-filter">
+            <div class="filter-type">
+              <h5>Car Filter</h5>
+              <select data-aos="fade-left" name="" class="select-filter">
+                <option value="">Brand</option>
+                <option value="">Audi</option>
+                <option value="">Acura</option>
+                <option value="">BMW</option>
+              </select>
+              <select data-aos="fade-left" name="" class="select-filter">
+                <option value="">Model</option>
+                <option value="">Q3</option>
+                <option value="">A4</option>
+                <option value="">AVENTADOR</option>
+              </select>
+              <select data-aos="fade-left" name="" class="select-filter">
+                <option value="">BODY STYLE</option>
+                <option value="">OPTION</option>
+                <option value="">OPTION</option>
+              </select>
+              <select data-aos="fade-left" name="" class="select-filter">
+                <option value="">Condition</option>
+                <option value="">First Hand</option>
+                <option value="">Second Hand</option>
+              </select>
+              <select data-aos="fade-left" name="" class="select-filter">
+                <option value="">Transmisson</option>
+                <option value="">Bluetooth</option>
+                <option value="">WiFi</option>
+              </select>
+              <select data-aos="fade-left" name="" class="select-filter">
+                <option value="">Mileage</option>
+                <option value="">27</option>
+                <option value="">20</option>
+                <option value="">10</option>
+              </select>
+              <select data-aos="fade-left" name="" class="select-filter">
+                <option value="">Engine</option>
+                <option value="">BC3</option>
+                <option value="">BC4</option>
+                <option value="">BC5</option>
+              </select>
+              <select data-aos="fade-left" name="" class="select-filter">
+                <option value="">Colors</option>
+                <option value="">Red</option>
+                <option value="">Black</option>
+                <option value="">Yellow</option>
+              </select>
+            </div>
+
+          </div>
+          <button data-aos="fade-right" class="reset-filter">Reset Filter</button>
+        </div>
+      </div>
+    </section>
+
+    <footer data-aos="zoom-in">
+      <div class="footer">
+        <div data-aos="fade-down" class="contact">
+          <h2>Contact Us Now!</h2>
+          <div>
+            <span>
+              <a href="#" class="call">
+                <i class="fa-solid fa-phone"></i>
+                (+12) 345 678 910
+              </a>
+            </span>
+            <span>
+              <a href="#" class="mail">
+                <i class="fa-regular fa-envelope medai2"></i>
+                Colorlib@gmail.com
+              </a>
+            </span>
+          </div>
+        </div>
+        <div data-aos="fade-up" class="footer-content">
+          <div class="footer-content1">
+            <h2>
+              <span> HVAC </span>
+            </h2>
+            <p>
+              Any questions? Let us know in store at 625 Gloria Union,
+              California, United Stated or call us on (+1) 96 123 8888
+            </p>
+            <p>
+              <span>
+                <i
+                  style="background-color: #324975"
+                  class="fa-brands fa-facebook-f media3"
+                ></i>
+                <i
+                  style="background: #2c85ae"
+                  class="fa-brands fa-twitter media3"
+                ></i>
+                <i
+                  style="background: #dc4438"
+                  class="fa-brands fa-google media3"
+                ></i>
+                <i
+                  style="background: #3eaff0"
+                  class="fa-brands fa-skype media3"
+                ></i>
+              </span>
+            </p>
+            <p>
+              <span>Copyright &copy; 2024 Colorlib</span>
+            </p>
+          </div>
+          <div class="footer-content2">
+            <h5>Infomation</h5>
+            <ul>
+              <li><a href="#">> Purchase</a></li>
+              <li><a href="#">> Payment</a></li>
+              <li><a href="#">> Shipping</a></li>
+              <li><a href="#">> Return</a></li>
+            </ul>
+          </div>
+          <div class="footer-content2">
+            <h5>Infomation</h5>
+            <ul>
+              <li><a href="#">> Hatchback</a></li>
+              <li><a href="#">> Sedan</a></li>
+              <li><a href="#">> SUV</a></li>
+              <li><a href="#">> Crossover</a></li>
+            </ul>
+          </div>
+          <div class="footer-content2">
+            <h5>Top Brand</h5>
+            <ul>
+              <li><a href="#">> Abarth</a></li>
+              <li><a href="#">> Acura</a></li>
+              <li><a href="#">> Alfa Romeo</a></li>
+              <li><a href="#">> Audi</a></li>
+            </ul>
+          </div>
+          <div class="footer-content2">
+            <h5></h5>
+            <ul>
+              <li><a href="#">> BMW</a></li>
+              <li><a href="#">> Chevrolet</a></li>
+              <li><a href="#">> Ferrari</a></li>
+              <li><a href="#">> Honda</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        offset : 300,
+        duration : 1000
+      });
+    </script>
+  </body>
+</html>

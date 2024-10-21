@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="about.css" />
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <nav>
+      <div class="nav1">
+        <div class="info1">
+          <span>
+            <i class="fa-regular fa-clock medai2"></i>
+            Week day: 08:00 am to 18:00 pm
+          </span>
+          <span>
+            <i class="fa-regular fa-envelope medai2"></i>
+            Info.colorlib@gmail.com
+          </span>
+        </div>
+        <div class="info2">
+          <span>
+            <i class="fa-solid fa-phone medai2"></i>
+            (+12) 345 678 910
+          </span>
+          <span>
+            <i class="fa-brands fa-facebook-f media"></i>
+            <i class="fa-brands fa-twitter media"></i>
+            <i class="fa-brands fa-google media"></i>
+            <i class="fa-brands fa-instagram media"></i>
+          </span>
+        </div>
+      </div>
+      <div class="nav2">
+        <span class="logo">
+          <img
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAFFElEQVR4nO1azYscRRRvSTYq0SRrdMWT/g35AEHJHhQdM7s7/fs1LSZOsp4GFEJC8KgYzEnXS1AEIcEoi8GLBxONnmSDAQkexf3Ix2HXJBuUXIybqWqx5fX2yqzTr7t6dmb8IA8KBqqr3vu9r3r1ajzvDv1PKa5WB5ukb8gJA3xhgRlD3jSASQZ50wLTMiffNH2/FtdqW7x/A8WVyt0GeNEAXxvgd0vGZYasMeRZQ+6Vvby+AwjDey152JJXywqvDuAnCxyKx8fv6QuIyPefs+SlrgFoB3QxIp/trRuRx3oGoB3Qx2L57oIYHX3Ykt/3DQTTGCIvxMBQV0DcrtUeE3M7Mr5mgeOG3GeAbbHvb40bjYFkjIw8aH1/uwH2W+CEAa47WmZOZFi7JRxAGOCbCKjGYbjOee/h4fWR748YYMoFTNypZSR7FLpTlwIzIncXJRAjbtZJijbA+wWa+iiu1zd6XaI4DO+z5GSB5d/tJMXmWeJ1r0dkgCN5vKMgeMZpIzGfJWdzNnutVyCcwAAXnQ7N9MRW3cnrE9l8NzvoYo2rqia6GBNOMQNcVoAs5Aa+FICqb/aybFAoAqpq4AfBHnWhVLHaOeHKPA7DByzwiiFPi0YNcEuGBa4Y8owFDpQ5EwxwTknHX2YLUK0OaqW4aMYBwOb0LvKrwwF6W9J7DDxStG+THFWARHGlsilrga8suCancA6AdZZsGPJGEYAMQLcs+UZe7MXDw+sNuZi1XkC2LTDAO0qQH1cZBEHdAj+UBZClLAu8Go+N3Z/FywIfKop4ux2I+G82k32J4NXqoAUeN0EwLmnYkL8UCDjfJAMRTkZicWCmANBvlvxMLGx9/0mJt0S2ZZ5Z35/OQj2noN6WWux8CS3PrwixyoqiDHK+hOudT2QLgh2Kt8xkWSRTw1KKp/POMSCWUFxeFBKWcLnFRAFh+JAy/3MWA5MJJAw35M1nrlF8PRGqUtlUAkiz5aBW58sCWeoKkDDcXMK1lsoDKXCtpMvh7lq+6lpB8LzrPpZcKO1aasXr+9tTixTf5FqCUAK7zRq+v1WEK2GRqVSJOxU+0+7pF9ifzk+U0KSMeQlsiQkZqSWcQdhljU+kvF9SgHyeBSRbUOCE5iaJluv1jZZ8wgKflAQqgp6NguApqXTzeFjgpKLkt9o+ll6s8vH1vBJlFUPy5RJuc9Rlz7jRGNBSvzQv2hfUalvUojFrgQYG+NTFEq77NYExRRE2s2gUMsBXeUHnBITcVQRE3Ml1PwN8qyjjjL6I3KsyJ3e7MJYzZC3njEsJnyr3BU+j5ODRz4tLRUG5QkVAnBUCXMmp5TbkCwEcyhFish9AYs+7y5Kn1D2AA8WaWLaKWm5Lq6bXQAxwNAfEnHPHURoNBanzSK+AGPLNnGz3R0Q+7QSiZcP3CgSa1GKmEyBpkjiVq0DyWCkQLQ87F3KFAi5nNSbk2pzWZgtSwaaVs/yeWik72rKTHthx6gXfFQa4CgYY0m6Of2NyToRxrQCSvRuNAakmtHPCrh6zUgF7XXjoKQSTmn5RGgXJHTsIdsjjjmgxGfLQA+xMCkDgZIkb5+wS+eiaQPylPWCo0M16MMyyO63NEtpjqGSOvgABPujp27u8T7i6WocAZkqn2E4pvUMfLHtRKhjzSV/4H/kHhLhbEOxJ/18SlY4BMpIqVgrAjlNrt0nuBpKCpY2ZduKnpaHR8qcaaW78KNdTudnJHce1Cr5D3n+Q/gT6tkvPlYTKQwAAAABJRU5ErkJggg=="
+          />
+           HVAC </span>
+        <div class="nav-content">
+          <div class="nav-content1">
+            <a href="index.html"><span class="pg-home">HOME</span></a>
+            <a href="cars.html"><span class="pg-cars">CARS</span></a>
+            <a href="blog.html"><span class="pg-blog">BLOG</span></a>
+            <a><span class="pg-pages">PAGES</span>
+              <div class="dropDown">
+                <ul>
+                  <li onclick="aboutOpen()">About Us</li>
+                <li onclick="carOpen()">Car Details</li>
+                <li onclick="blogOpen()">Blog Details</li>
+                </ul>
+              </div>
+            </a>
+            <a href="about.html"><span class="pg-about">ABOUT</span></a>
+            <a href="contact.html"><span class="pg-contact">CONTACT</span></a>
+          </div>
+          <div class="nav-content2">
+            <span
+              ><a href="#"> <i class="fa-solid fa-cart-plus"></i></a> </span
+            ><span
+              ><a href="#">
+                <i class="fa-solid fa-magnifying-glass"></i
+              ></a> </span
+            ><span class="btn1"><a href="#"> Add Car</a> </span>
+          </div>
+        </div>
+        <i onclick="showSidebar()" class="fa-solid fa-bars menu"></i>
+      </div>
+    </nav>
+
+    <div class="sidebarfull">
+      <div class="sidebar">
+        <div class="nav-content2">
+          <span onclick="hideSidebar()"> <i class="fa-solid fa-plus"></i> </span          ><span> <i class="fa-solid fa-magnifying-glass"></i> </span
+          ><span class="btn1"> Add Car </span>
+        </div>
+        <span class="logo">
+          <img
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAFFElEQVR4nO1azYscRRRvSTYq0SRrdMWT/g35AEHJHhQdM7s7/fs1LSZOsp4GFEJC8KgYzEnXS1AEIcEoi8GLBxONnmSDAQkexf3Ix2HXJBuUXIybqWqx5fX2yqzTr7t6dmb8IA8KBqqr3vu9r3r1ajzvDv1PKa5WB5ukb8gJA3xhgRlD3jSASQZ50wLTMiffNH2/FtdqW7x/A8WVyt0GeNEAXxvgd0vGZYasMeRZQ+6Vvby+AwjDey152JJXywqvDuAnCxyKx8fv6QuIyPefs+SlrgFoB3QxIp/trRuRx3oGoB3Qx2L57oIYHX3Ykt/3DQTTGCIvxMBQV0DcrtUeE3M7Mr5mgeOG3GeAbbHvb40bjYFkjIw8aH1/uwH2W+CEAa47WmZOZFi7JRxAGOCbCKjGYbjOee/h4fWR748YYMoFTNypZSR7FLpTlwIzIncXJRAjbtZJijbA+wWa+iiu1zd6XaI4DO+z5GSB5d/tJMXmWeJ1r0dkgCN5vKMgeMZpIzGfJWdzNnutVyCcwAAXnQ7N9MRW3cnrE9l8NzvoYo2rqia6GBNOMQNcVoAs5Aa+FICqb/aybFAoAqpq4AfBHnWhVLHaOeHKPA7DByzwiiFPi0YNcEuGBa4Y8owFDpQ5EwxwTknHX2YLUK0OaqW4aMYBwOb0LvKrwwF6W9J7DDxStG+THFWARHGlsilrga8suCancA6AdZZsGPJGEYAMQLcs+UZe7MXDw+sNuZi1XkC2LTDAO0qQH1cZBEHdAj+UBZClLAu8Go+N3Z/FywIfKop4ux2I+G82k32J4NXqoAUeN0EwLmnYkL8UCDjfJAMRTkZicWCmANBvlvxMLGx9/0mJt0S2ZZ5Z35/OQj2noN6WWux8CS3PrwixyoqiDHK+hOudT2QLgh2Kt8xkWSRTw1KKp/POMSCWUFxeFBKWcLnFRAFh+JAy/3MWA5MJJAw35M1nrlF8PRGqUtlUAkiz5aBW58sCWeoKkDDcXMK1lsoDKXCtpMvh7lq+6lpB8LzrPpZcKO1aasXr+9tTixTf5FqCUAK7zRq+v1WEK2GRqVSJOxU+0+7pF9ifzk+U0KSMeQlsiQkZqSWcQdhljU+kvF9SgHyeBSRbUOCE5iaJluv1jZZ8wgKflAQqgp6NguApqXTzeFjgpKLkt9o+ll6s8vH1vBJlFUPy5RJuc9Rlz7jRGNBSvzQv2hfUalvUojFrgQYG+NTFEq77NYExRRE2s2gUMsBXeUHnBITcVQRE3Ml1PwN8qyjjjL6I3KsyJ3e7MJYzZC3njEsJnyr3BU+j5ODRz4tLRUG5QkVAnBUCXMmp5TbkCwEcyhFish9AYs+7y5Kn1D2AA8WaWLaKWm5Lq6bXQAxwNAfEnHPHURoNBanzSK+AGPLNnGz3R0Q+7QSiZcP3CgSa1GKmEyBpkjiVq0DyWCkQLQ87F3KFAi5nNSbk2pzWZgtSwaaVs/yeWik72rKTHthx6gXfFQa4CgYY0m6Of2NyToRxrQCSvRuNAakmtHPCrh6zUgF7XXjoKQSTmn5RGgXJHTsIdsjjjmgxGfLQA+xMCkDgZIkb5+wS+eiaQPylPWCo0M16MMyyO63NEtpjqGSOvgABPujp27u8T7i6WocAZkqn2E4pvUMfLHtRKhjzSV/4H/kHhLhbEOxJ/18SlY4BMpIqVgrAjlNrt0nuBpKCpY2ZduKnpaHR8qcaaW78KNdTudnJHce1Cr5D3n+Q/gT6tkvPlYTKQwAAAABJRU5ErkJggg=="
+          />
+           HVAC </span>
+        <div class="nav-content1">
+          <a href="index.html"><span>HOME</span></a>
+          <a href="cars.html"><span>CARS</span></a>
+          <a href="blog.html"><span>BLOG</span></a>
+          <a><span class="mob-btn-dropdown">PAGES</span>
+            <div class="mob-dropdown">
+              <ul>
+                <a href="about.html">
+                  <li>About Us</li>
+                </a>
+                <a href="cars.html">
+                  <li>Car Details</li>
+                </a>
+                <a href="blog.html">
+                  <li>Blog Details</li>
+                </a>
+              </ul>
+            </div>
+          </a>
+          <a href="about.html"><span>ABOUT</span></a>
+          <a href="contact.html"><span>CONTACT</span></a>
+        </div>
+        <div class="nav3">
+          <div class="info1">
+            <span>
+              <i class="fa-regular fa-clock medai2"></i>
+              Week day: 08:00 am to 18:00 pm
+            </span>
+            <span>
+              <i class="fa-regular fa-envelope medai2"></i>
+              Info.colorlib@gmail.com
+            </span>
+          </div>
+          <div class="info2">
+            <span>
+              <i class="fa-solid fa-phone medai2"></i>
+              (+12) 345 678 910
+            </span>
+            <span>
+              <i class="fa-brands fa-facebook-f media"></i>
+              <i class="fa-brands fa-twitter media"></i>
+              <i class="fa-brands fa-google media"></i>
+              <i class="fa-brands fa-instagram media"></i>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div data-aos="fade-up"
+    data-aos-anchor-placement="center-bottom" class="hero">
+      <div data-aos="zoom-out-down" class="hero-content">
+        <p>About Us</p>
+        <div class="pages">
+          <a href="index.html" style="color: white">
+            <span>
+              <i class="fa-solid fa-house-chimney" style="color: red"></i>
+              Home ></span
+            ></a
+          >
+          <span class="pg">About Us</span>
+        </div>
+      </div>
+    </div>
+
+    <section>
+      <div class="about-quarantee">
+        <h2>Wellcome To HVAC Auto Online</h2>
+        <h2>We Provide Everything You Need To A Car</h2>
+        <p>
+          First I will explain what contextual advertising is. Contextual
+          advertising means the advertising of products on a website according
+          to the content the page is displaying. For example if the content of a
+          website was information on a Ford truck then the advertisements
+        </p>
+        <div class="about-quarantee-content" data-aos="zoom-in">
+          <div class="about-quarantee-content1">
+            <span>
+              <img
+                src="https://cdn-icons-png.flaticon.com/256/0/315.png"
+                alt="assured"
+              />
+            </span>
+            <h5>Quality Assurance System</h5>
+            <p>
+              It seems though that some of the biggest problems with the
+              internet advertising trends are the lack of
+            </p>
+          </div>
+          <div class="about-quarantee-content1">
+            <span>
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSG5htST641ffrPf1541WeyfvX97XmE3488Nw&s"
+                alt="tested"
+              />
+            </span>
+            <h5>Accurate Testing Processes</h5>
+            <p>
+              Where do you register your complaints? How can you protest in any
+              form against companies whose
+            </p>
+          </div>
+          <div class="about-quarantee-content1">
+            <span>
+              <img
+                src="https://static.vecteezy.com/system/resources/thumbnails/025/366/463/small/customisation-icon-customize-illustration-sign-mechanical-symbol-settings-logo-option-mark-vector.jpg"
+                alt="integrated"
+              />
+            </span>
+            <h5>Infrastructure Integration Technology</h5>
+            <p>
+              So in final analysis: it's true, I hate peeping Toms, but if I had
+              to choose, I’d take one any day over an
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="our-about">
+        <div data-aos="flip-up" class="our-car-img">
+          <img
+            src="https://themewagon.github.io/hvac/img/about/about-pic.jpg"
+            alt="car img"
+          />
+        </div>
+        <div class="our-car-content">
+          <div class="our-car-content1">
+            <h5>Our Mission</h5>
+            <p>
+              Now, I'm not like Robin, that weirdo from my cultural anthropology
+              class; I think that advertising is something that has its place in
+              our society; which for better or worse is structured along a
+              marketplace economy. But, simply because I feel advertising has a
+              right to exist, doesn’t mean that I like or agree with it, in its
+            </p>
+          </div>
+          <div class="our-car-content1">
+            <h5>Our Vision</h5>
+            <p>
+              Where do you register your complaints? How can you protest in any
+              form against companies whose advertising techniques you don’t
+              agree with? You don’t. And on another point of difference between
+              traditional products and their advertising and those of the
+              internet nature, simply ignoring internet advertising is
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div data-aos="fade-up" class="request-call">
+      <div class="req-call-inner-content">
+        <div class="request-call-content">
+          <h2>Request A Call Back</h2>
+          <p>
+            Posters had been a very beneficial marketing tool because it had
+            paved to deliver an effective message that conveyed customer’s
+          </p>
+          <a href="#">CONTACT US</a>
+        </div>
+        <div class="request-call-form">
+          <div class="form-detail">
+            <input type="text" placeholder="Name" />
+            <input type="text" placeholder="Email" />
+            <input type="text" placeholder="Phone" />
+            <select name="" id="">
+              <option value="1">Choose our Service</option>
+              <option value="1">Buy Cars</option>
+              <option value="1">Sell Cars</option>
+              <option value="1">Wash Cars</option>
+            </select>
+          </div>
+          <a href="#" class="submit">Submit Now</a>
+        </div>
+      </div>
+    </div>
+
+    <section>
+      <div class="expert">
+        <div class="expert-title">
+          <span>Our Team</span>
+          <h2>Meet Our Expert</h2>
+        </div>
+        <div class="expert-content">
+        <div class="expert-1">
+          <img data-aos="zoom-in-up" src="https://themewagon.github.io/hvac/img/about/team-1.jpg" alt="expert1">
+          <h5>John Smith</h5>
+          <span>Marketing</span>
+        </div>
+        <div class="expert-1">
+          <img data-aos="zoom-in-down" src="https://themewagon.github.io/hvac/img/about/team-2.jpg" alt="expert1">
+          <h5>Christine Wise</h5>
+          <span>C.E.O</span>
+        </div>
+        <div class="expert-1">
+          <img data-aos="zoom-in-up" src="https://themewagon.github.io/hvac/img/about/team-3.jpg" alt="expert1">
+          <h5>Sean Robbins</h5>
+          <span>Manager</span>
+        </div>
+        <div class="expert-1">
+          <img data-aos="zoom-in-down" src="https://themewagon.github.io/hvac/img/about/team-4.jpg" alt="expert1">
+          <h5>Lucy Myers</h5>
+          <span>Delivary</span>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="testimonial">
+        <div data-aos="zoom-out" class="testimonial-head">
+          <span>Testimonials</span>
+          <h2>What People Say About Us</h2>
+          <p>Our customers are our biggest supporters. What do they think of us? Lorem</p>
+        </div>
+        <div class="testimonial-content">
+          <a href="#">
+            <div data-aos="fade-right" class="testimonial-author">
+              <div class="testimonial-author-img">
+              <span>
+                <img src="https://themewagon.github.io/hvac/img/testimonial/testimonial-1.png" alt="author">
+              </span>
+              <span><h5>John Smith</h5></span>
+            </div>
+            <div data-aos="fade-up" class="testimonial-author-content">
+              <p>
+                For one thing they usually step all over the hedges and plants on the side of someone’s house killing               
+              </p>
+            </div>
+          </div>
+          </a>
+          <a href="#">
+            <div data-aos="fade-right" class="testimonial-author">
+              <div class="testimonial-author-img">
+              <span>
+                <img src="https://themewagon.github.io/hvac/img/testimonial/testimonial-2.png" alt="author">
+              </span>
+              <span><h5>Emma Sandoval</h5></span>
+            </div>
+            <div data-aos="fade-up" class="testimonial-author-content">
+              <p>It seems though that some of the biggest problems with the internet advertising trends are the lack of               
+              </p>
+            </div>
+          </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <div class="client-buy-car">
+      <div data-aos="fade-up"  class="client-buy-car-content">
+        <div class="client-buy-car-content-detail">
+          <h2 class="num">1922</h2>
+          <p>Vehicles Stock</p>
+        </div>
+        <div class="client-buy-car-content-detail">
+          <h2 class="num" 
+          ariaLabel="500" enterKeyHint="1500">1500+</h2>
+          <p>Vehicles Sale</p>
+        </div>
+        <div class="client-buy-car-content-detail">
+          <h2 class="num" data="1922">1922</h2>
+          <p>Dealer Reviews</p>
+        </div>
+        <div class="client-buy-car-content-detail">
+          <h2 class="num" data="5100">5100</h2>
+          <p>Happy Clients</p>
+        </div>
+      </div>
+    </div>
+
+    <section>
+      <div data-aos="zoom-in" class="clients">
+        <div class="client-head">
+        <span>Partner</span>
+        <h2>Our Clients</h2>
+      </div>
+      <div class="client-detail">
+        <a href="#"><img src="https://themewagon.github.io/hvac/img/clients/client-1.png" alt="client"></a>
+        <a href="#"><img src="https://themewagon.github.io/hvac/img/clients/client-2.png" alt="client"></a>
+        <a href="#"><img src="https://themewagon.github.io/hvac/img/clients/client-3.png" alt="client"></a>
+        <a href="#"><img src="https://themewagon.github.io/hvac/img/clients/client-2.png" alt="client"></a>
+        <a href="#"><img src="https://themewagon.github.io/hvac/img/clients/client-4.png" alt="client"></a>
+        <a href="#"><img src="https://themewagon.github.io/hvac/img/clients/client-5.png" alt="client"></a>
+        <a href="#"><img src="https://themewagon.github.io/hvac/img/clients/client-6.png" alt="client"></a>
+        <a href="#"><img src="https://themewagon.github.io/hvac/img/clients/client-7.png" alt="client"></a>
+      </div>
+      </div>
+    </section>
+      
+    <footer data-aos="zoom-in">
+      <div class="footer">
+        <div class="contact">
+          <h2>Contact Us Now!</h2>
+          <div>
+            <span>
+              <a href="#" class="call">
+                <i class="fa-solid fa-phone"></i>
+                (+12) 345 678 910
+              </a>
+            </span>
+            <span>
+              <a href="#" class="mail">
+                <i class="fa-regular fa-envelope medai2"></i>
+                Colorlib@gmail.com
+              </a>
+            </span>
+          </div>
+        </div>
+        <div class="footer-content">
+          <div class="footer-content1">
+            <h2>
+              <span> HVAC </span>
+            </h2>
+            <p>
+              Any questions? Let us know in store at 625 Gloria Union,
+              California, United Stated or call us on (+1) 96 123 8888
+            </p>
+            <p>
+              <span>
+                <i
+                  style="background-color: #324975"
+                  class="fa-brands fa-facebook-f media3"
+                ></i>
+                <i
+                  style="background: #2c85ae"
+                  class="fa-brands fa-twitter media3"
+                ></i>
+                <i
+                  style="background: #dc4438"
+                  class="fa-brands fa-google media3"
+                ></i>
+                <i
+                  style="background: #3eaff0"
+                  class="fa-brands fa-skype media3"
+                ></i>
+              </span>
+            </p>
+            <p>
+              <span>Copyright &copy; 2024 Colorlib</span>
+            </p>
+          </div>
+          <div class="footer-content2">
+            <h5>Infomation</h5>
+            <ul>
+              <li><a href="#">> Purchase</a></li>
+              <li><a href="#">> Payment</a></li>
+              <li><a href="#">> Shipping</a></li>
+              <li><a href="#">> Return</a></li>
+            </ul>
+          </div>
+          <div class="footer-content2">
+            <h5>Infomation</h5>
+            <ul>
+              <li><a href="#">> Hatchback</a></li>
+              <li><a href="#">> Sedan</a></li>
+              <li><a href="#">> SUV</a></li>
+              <li><a href="#">> Crossover</a></li>
+            </ul>
+          </div>
+          <div class="footer-content2">
+            <h5>Top Brand</h5>
+            <ul>
+              <li><a href="#">> Abarth</a></li>
+              <li><a href="#">> Acura</a></li>
+              <li><a href="#">> Alfa Romeo</a></li>
+              <li><a href="#">> Audi</a></li>
+            </ul>
+          </div>
+          <div class="footer-content2">
+            <h5></h5>
+            <ul>
+              <li><a href="#">> BMW</a></li>
+              <li><a href="#">> Chevrolet</a></li>
+              <li><a href="#">> Ferrari</a></li>
+              <li><a href="#">> Honda</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        offset : 300,
+        duration : 1000
+      });
+    </script>
+  </body>
+</html>
